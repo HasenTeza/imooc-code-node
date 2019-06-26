@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>not否定选择器</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+	display: block;
+	float: left;
+	width: 100px;
+	height: 30px;
+}
+nav {
+	width: 800px;
+	margin: 0 auto;
+}
+nav > a:not(:last-of-type) {
+	border-right: 1px solid red;
+/*最后一个的border-right不需要，用not否定，用:last-of-type定位选择了不需要的*/
+}
+</style>
+</head>
+<body>
+	：not否定选择器
+<nav>
+	<a href="#">first</a>
+	<a href="#">second</a>
+	<a href="#">third</a>
+	<a href="#">fourth</a>
+	<a href="#">fifth</a>
+</nav>
+</body>
+</html>

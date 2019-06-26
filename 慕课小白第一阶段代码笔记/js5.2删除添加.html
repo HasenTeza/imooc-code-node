@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.cut{background-color: #333;color: #f00}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		BOM元素获取
+	</div>
+	<ul id="list1">
+		<li><i>dom</i></li>
+		<li>js</li>
+		<li>css</li>
+		<li>xml</li>
+	</ul>
+	<ol>
+		<li>android</li>
+		<li>java</li>
+		<li>php</li>
+		<li>qiandaun</li>
+	</ol>
+	<p id="text" align="center" data-type="title">文本</p>
+<script type="text/javascript">
+//1.inner    ele.innerHTML    标签前内元素内容的提取
+var lis=document.getElementById("list1").getElementsByTagName("li");
+for (var i = 0, len=lis.length;i<len; i++) {
+	console.log(lis[i].innerHTML);	//把li内容提取出来
+	// lis[i].innerHTML+='程序'；		//在提取内容后添加字符串
+}
+////////////////////////////////////////////////////////////////////////////////
+//2.className将css中定义的样式引用到某一标签上
+ lis[1].className="cut";		// className会对元素重新设置，覆盖之前的样式
+ ////////////////////////////////////////////////////////////////////////////////
+
+ //3.DOM添加属性getAttrribute 
+ p.setAttribute("date-color","red");	//给p标签设置一个属性（属性名，属性值）
+ console.log(p.getAttribute("class"));	//显示标签内不标准自定义的属性
+//4,。删除方法ele.removeAttribute("a")删除ele上的啊属性
+p.removeAttribute("date-color");
+
+
+</script>
+	</body>
+</html>

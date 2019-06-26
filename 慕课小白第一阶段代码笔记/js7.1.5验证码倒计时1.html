@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+      .main{
+      	padding:20px;
+      }验证码倒计时
+	</style>
+	<script>
+       window.onload=function(){
+       	  // 获取按钮
+       	  var btn=document.getElementById("btn"),
+       	      time=10,
+       	      timer=null;
+       	  // 绑定事件
+       	  btn.onclick=function(){
+              // 执行间歇调用
+              timer=setInterval(function(){
+                  time--;
+                  // 判断,如果time小于等于0，则清除定时器
+                  if(time<=0){
+                     clearInterval(timer);
+                     btn.value='发送验证码';
+                     // 将按钮设置为可用
+                     btn.disabled=false;
+                     time=10;
+                  }else{
+                  	 // 改变按钮的value即显示状态
+                  	 btn.value=time+'秒后重试';
+                  	 // 将按钮禁用
+                  	 btn.disabled=true;
+                  }
+              },1000)
+       	  }
+       }
+	</script>
+</head>
+<body>
+	<div class="main">
+		<input type="button" id="btn" value="发送验证码">
+	</div>
+</body>
+</html>

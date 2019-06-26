@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变角度、节点、透明度</title>
+	<style type="text/css">
+	/*角度*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-linear-gradient(135deg, red, yellow, blue);/*角度值垂直180,1,180.90，-90.45，-45.135-135*/
+		background:    -moz-linear-gradient(135deg, red, yellow, blue);
+		background:      -o-linear-gradient(135deg, red, yellow, blue);
+		background:         linear-gradient(135deg, red, yellow, blue);
+	}
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+		background:    -moz-linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+		background:      -o-linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+		background:         linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+	}
+	/*结点分布，linear-gradient渐变颜色所占比例*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+		background:    -moz-linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+		background:      -o-linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+		background:         linear-gradient(90deg, red 10%, orange 15%, yellow 20%, green 50%, blue 70%, indigo 80%, violet 100%);
+	}
+	/*透明*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-linear-gradient(90deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+		background:    -moz-linear-gradient(90deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+		background:      -o-linear-gradient(90deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+		background:         linear-gradient(90deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+	}
+	/*重复渐变-repeating-不断地重复从左到右0%是透明*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-repeating-linear-gradient(90deg, red 0%, blue 10%, red 20%);
+		background:    -moz-repeating-linear-gradient(90deg, red 0%, blue 10%, red 20%);
+		background:      -o-repeating-linear-gradient(90deg, red 0%, blue 10%, red 20%);
+		background:         repeating-linear-gradient(90deg, red 0%, blue 10%, red 20%);
+	}
+	/*径向渐变-radial-gradient颜色结点均匀分布(默认情况)从内到外进行圆形渐变background：radial-gradient(center位置 )*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-radial-gradient(red, blue);
+		background:    -moz-radial-gradient(red, blue);
+		background:      -o-radial-gradient(red, blue);
+		background:         radial-gradient(red, blue);
+	}
+	/*径向渐变 - 颜色结点不均匀分布*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-radial-gradient(red 50%, blue 70%);
+		background:    -moz-radial-gradient(red 50%, blue 70%);
+		background:      -o-radial-gradient(red 50%, blue 70%);
+		background:         radial-gradient(red 50%, blue 70%);
+	}
+	/*径向渐变 - 设置形状circle为圆形，默认为ellipse椭圆形*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-radial-gradient(circle, red, blue);
+		background:    -moz-radial-gradient(circle, red, blue);
+		background:      -o-radial-gradient(circle, red, blue);
+		background:         radial-gradient(circle, red, blue);
+	}
+	/*径向渐变 - 不同尺寸大小关键字的使用*/
+	div.closest-side {
+		width: 300px; height: 200px; margin: 50px;
+		/*圆心的方向    */
+		background: -webkit-radial-gradient(30% 70%, closest-side, red, blue);
+		background:    -moz-radial-gradient(30% 70%, closest-side, red, blue);
+		background:      -o-radial-gradient(30% 70%, closest-side, red, blue);
+		background:         radial-gradient(30% 70%, closest-side, red, blue);
+	}
+	div.farthest-side {
+		width: 300px; height: 200px; margin: 50px;
+		background: -webkit-radial-gradient(30% 70%, farthest-side, red, blue);
+		background:    -moz-radial-gradient(30% 70%, farthest-side, red, blue);
+		background:      -o-radial-gradient(30% 70%, farthest-side, red, blue);
+		background:         radial-gradient(30% 70%, farthest-side, red, blue);
+	}
+	div.closest-corner {
+		width: 300px; height: 200px; margin: 50px;
+		background: -webkit-radial-gradient(30% 70%, closest-corner, red, blue);
+		background:    -moz-radial-gradient(30% 70%, closest-corner, red, blue);
+		background:      -o-radial-gradient(30% 70%, closest-corner, red, blue);
+		background:         radial-gradient(30% 70%, closest-corner, red, blue);
+	}
+	div.farthest-corner {
+		width: 300px; height: 200px; margin: 50px;
+		background: -webkit-radial-gradient(30% 70%, farthest-corner, red, blue);
+		background:    -moz-radial-gradient(30% 70%, farthest-corner, red, blue);
+		background:      -o-radial-gradient(30% 70%, farthest-corner, red, blue);
+		background:         radial-gradient(30% 70%, farthest-corner, red, blue);
+	}
+	/*径向渐变 - 重复渐变repeating*/
+	div {
+		width: 800px; height: 500px;
+		background: -webkit-repeating-radial-gradient(red 0%, blue 10%, red 20% );
+		background:    -moz-repeating-radial-gradient(red 0%, blue 10%, red 20% );
+		background:      -o-repeating-radial-gradient(red 0%, blue 10%, red 20% );
+		background:         repeating-radial-gradient(red 0%, blue 10%, red 20% );
+	}
+
+
+	/*IE 6—8渐变*/
+	div {
+		width: 800px;
+		height: 500px;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0000ff',GradientType=2 );
+		/*开始颜色 结束颜色 渐变类型 0从上到下  1从左到右*/
+	}
+</style>
+</head>
+<body>
+	<div class="closest-side"></div>
+	<div class="farthest-side"></div>
+	<div class="closest-corner"></div>
+	<div class="farthest-corner"></div>
+</body>
+</html>

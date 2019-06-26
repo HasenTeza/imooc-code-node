@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>translate3d移动</title>
+<style type="text/css">
+div { width: 1500px; height: 250px; background: #abcdef; margin: auto; }
+/*看上去像里眼睛近一些*/
+/*（x,y,z）[都不可以省略]*/
+div > img {transform: translate3d(200px, 200px, 200px); } 
+
+
+/*正数离眼睛近些*/
+/*div > img {transform: translateZ(200px); } */
+
+
+</style>
+</head>
+<body>
+<div><img src="images/sprite.jpg"></div>
+</body>
+</html>

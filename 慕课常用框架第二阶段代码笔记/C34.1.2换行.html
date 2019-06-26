@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>word-break</title>
+<style type="text/css">
+h1 { width: 800px; margin: 10px auto; background: #abcdef; }
+/*正常换行浏览器默认换行*/
+h1:nth-child(1) { word-break: normal; }
+/*一行字满了换行*/
+h1:nth-child(2) { word-break: break-all; }
+/*有句号有分号的时候换行*/
+h1:nth-child(3) { word-break: keep-all; }
+h1:nth-child(4) { word-break: normal; }
+h1:nth-child(5) { word-break: break-all; }
+h1:nth-child(6) { word-break: keep-all; }
+h1 > span { color: red; }
+</style>
+</head>
+<body>
+<h1><span>word-break: normal;</span><br>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</h1>
+<h1><span>word-break: break-all;</span><br>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</h1>
+<h1><span>word-break: keep-all;</span><br>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</h1>
+<h1><span>word-break: normal;</span><br>将梦想悬挂于枝头，在夏季的丰盛中饱满，绽放；为梦想披星戴月，刷新生命的温度。那些因梦想蜕变了的灵魂，历经时光坎坷，痛苦挣扎，依然在枝头放歌，温暖了生命如花的影子。前世，储蓄梦想；今生，演绎铿锵。</h1>
+<h1><span>word-break: break-all;</span><br>将梦想悬挂于枝头，在夏季的丰盛中饱满，绽放；为梦想披星戴月，刷新生命的温度。那些因梦想蜕变了的灵魂，历经时光坎坷，痛苦挣扎，依然在枝头放歌，温暖了生命如花的影子。前世，储蓄梦想；今生，演绎铿锵。</h1>
+<h1><span>word-break: keep-all;</span><br>将梦想悬挂于枝头，在夏季的丰盛中饱满，绽放；为梦想披星戴月，刷新生命的温度。那些因梦想蜕变了的灵魂，历经时光坎坷，痛苦挣扎，依然在枝头放歌，温暖了生命如花的影子。前世，储蓄梦想；今生，演绎铿锵。</h1>
+</body>
+</html>

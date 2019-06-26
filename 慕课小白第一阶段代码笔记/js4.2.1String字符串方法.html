@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+//1.charAt()与charCodeAt()返回stringobject中index位置的字符（获取字串中的摸一个字符）
+var str="hello world";
+console.log(str[1]);			//取出索引位置的字符
+console.log(str.charAt(3));		//取索引为3的字符本身，娶不到返回空
+console.log(str.charCodeAt(3);	//取索引为3的字符编码
+/////////////////////////////////////////////////////////////////////////////////
+
+//2.indexOf搜索给定字符串，返回所在位置，没有返回-1；只检测第一次出现
+var email="1359039561@qq.com";
+console.log(email.indexOf("@"));		//检测@在字符串中的位置，从前往后检测
+console.log(email.lashindexOf("qq"));	//从后往前检测
+///////////////////////////////////////////////////////////////////////////////////////
+
+//3.slice截取字符串@不在截取范围内【截取位置】
+var email="1359039561@qq.com";
+email.slice(3,6);//6不在范围之内，截取的是345
+email.slice(-4,-3);//负数为字符创长度加上负数
+///////////////////////////////////////////////////////////////////////////////////////
+
+//4.substring与slice功能一样，不一样的是，substring为负数时，会自动转换为0【截取位置】
+console.log(str.substring(2,-5));		//会从新整理，负数为零，大的那个数为截取位置（0,2）
+//////////////////////////////////////////////////////////////////////////////////////
+
+//5.substr截取字符串【截取数量】
+// stringObject.substr(start,len )  len表示截取的长度，遇到负数，总长度家负数
+////////////////////////////////////////////////////////////////////////////////////////
+
+//6.应用；获取参数后缀名，abc.html;返回.html
+
+
+	//获取扩展名
+	var url="http://baidu.com/chulu.txt";
+	//扩展名为参数
+	function getformat(url){
+	//获取.在url中出现的位置
+	var pos=url.lashindexOf(".");
+	return url.substr(pos);
+	// 不想要扩展名前面有点     return url.substr(pos+1);
+}
+var formatName=getformat(url);
+var picFormat=getformat("123456.jpg");
+console.log(formatName);
+console.log(picFormat);
+//////////////////////////////////////////////////////////////////////////////////////
+
+//7.split()把一个字符串分割成字符数组
+var str='welcome-to-beijing';	//["welcome","to","beijing"]
+var arr=str.split("-");		//括号中给定符号，有这个符号断开形成一个元素
+
+var data='2018/08/02';
+var dataarr=str.split("/");
+///////////////////////////////////////////////////////////////////////////////////////
+
+//8.替换replace用字符替换字符，
+var tel='12134365521,63853173197,13753657';
+var newtel=tel.replace(',','!');		//将逗号替换成感叹号（替换谁，要替换成什么）
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+//9.toUpperCase小写字母转换成大写；toLoerCase小写字母转换成大写
+var str='welcome-to-beijing';
+var upper=str.toUpperCase();				//全部转换成大写
+var upper=str.charAt(6).toUpperCase();		//位置6转换成大写
+
+
+</script>
+</body>
+</html>

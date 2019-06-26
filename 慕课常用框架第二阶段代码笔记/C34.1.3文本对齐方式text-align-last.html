@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>文本对齐方式word-wrap只有IE支持,谷歌50+,火狐加前缀-moz</title>
+<style type="text/css">
+h1 { width: 800px; margin: 10px auto; background: #abcdef; }
+/*默认值自动对齐*/
+h1:nth-child(1) { text-align-last: auto; }
+/*左对齐*/
+h1:nth-child(2) { text-align-last: left；}
+/*右对齐*/
+h1:nth-child(3) { text-align-last: right；}
+/*居中*/
+h1:nth-child(4) {text-align-last: center；}
+/*两端对齐*/
+h1:nth-child(5) {text-align-last: justify；}
+/*跟文章的主流,文章左对齐结尾就左对齐 */
+h1:nth-child(6) {text-align-last: start；}
+/*文章左对齐,结尾就右对齐*/
+h1:nth-child(7) {text-align-last: end；}
+/*设置属性默认值*/
+h1:nth-child(8) {text-align-last: initial；}
+/*父元素怎样对齐,就怎样对齐*/
+h1:nth-child(9) {text-align-last: inherit；}
+
+
+
+
+
+h2 { width: 800px; margin: 10px auto; background: #abcdef; overflow: hidden;}
+/*overflow: hidden;溢出隐藏*/
+
+/*text-overflow修剪文本  IE6+火7+谷4+o11.1+safari3.1+*/
+/*溢出的文本直接减掉*/
+h2:{text-overflow: clip;}
+/*溢出的文本修剪掉的用省略号代替*/
+h2:{text-overflow: ellipsis;}
+/*用其他符号代替剪掉的文本作为提醒  只有火狐可以兼容*/
+/*h2:{text-overflow: string;}*/
+h2:{text-overflow: '>>';}
+</style>
+</head>
+<body>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h1>最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式最后一行的对齐方式<br>最后一行的对齐方式</h1>
+	<h2>dcjhflisjse;oithwuiegnsdjvgUkjvngghslugjhselugjbwkdgbnmbvollwirkfposjgnkvjfnillkjrshguihjsrgbiurskjhgiulwhtguewighvnsjkfgnlrs</h2>
+</body>
+</html>

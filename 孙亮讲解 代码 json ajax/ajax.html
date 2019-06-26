@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax</title>
+</head>
+<!-- json是种数据格式 -->
+<body>
+<center>
+    <form id="ajaxDemo" type="post">
+        <h4>选择想要的东西测试ajax</h4>
+        <select name="type">
+            <option value ="1">零食</option>
+            <option value ="2">水果
+            <option value ="3">我是bug</option>
+        </select><br>
+        <input type="button" value="确定" onclick="send();">
+    </form>
+</center>
+<script src="/js/jquery.js"></script>
+<script>
+    function send() {
+       //ajax请求数据
+        $.ajax({
+            type: "post",
+            //post保密性更强在网址上不显示一般用于支付页面（用于对数据要求较高的页面）， get在URL路径上显示具体参数最高存储4k，
+            url: "/index/testAjax",
+            //ajax访问后端地址，后端提供
+            data: $("#ajaxDemo").serialize(),
+            // <option value ="1">零食</option>传递给后端的值；
+            //根据ID定位到相应的页面区域，点击确定后提交给ajax相应的value值，返回相对应的数据
+            cache: false,
+            //关闭缓存，可写可不写
+            dataType: "json",
+            //ajax接收的参数的格式
+            success: function (data) {
+                // data是后台返回数据
+                // console.log(data);
+                //ajax成功则运行以下代码
+                if(data.status==200)
+                {
+                    alert('选择成功:'+data.context);
+                }
+                else {
+                    alert('选择失败'+data.context);
+                }
+            },
+            // success是表示成功了要调用的函数，error是阿贾克斯返回数据有问题调用函数
+            error: function (data) {
+                alert("ajax失败！");
+            }
+        });
+    }
+</script>
+</body>
+</html>

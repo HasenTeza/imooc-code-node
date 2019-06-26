@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器(鼠标经过的颜色变化)</title>
+	<style type="text/css">
+	
+   a{text-decoration: none; } 
+    /* a:link {color: #ccc; }*//*默认颜色*/
+    /*a:hover{color: #f00 }*//*经过颜色*/
+    /*a:active{color: #ff0 }*//*点下颜色*/
+    /*a:visited{color: #0ff }*//*访问过颜色*/
+
+	input{
+		width: 200px; 
+		height: 50px;
+		border:5px solid #f00;
+	}
+	input:focus{
+		background-color: #abcdef;
+		/*定义input一个框：focus在鼠标没有进入框内的时候无变化，进入框内后有变化*/
+	}
+</style>
+</head>
+<body>
+	动态伪类：
+	1.锚点伪类，：link(链接默认颜色),:visited(访问过得链接)
+	2.用户行为伪类，：hover(鼠标经过的时候)，：active(鼠标点下去的时候)，：focus(网页加载时获得光标)
+	<input type="text" >
+</body>
+</html>

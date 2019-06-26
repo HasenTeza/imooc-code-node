@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css字体文本样式</title>
+	<style type="text/css">
+	/*样式  样式  样式  样式  样式  样式  样式  样式  样式  样式  样式  样式  样式  */
+		h1{font-family: "微软雅黑","sans-serif";}
+		p{font-family: : "宋体"，"黑体","Serif","Monospace","Fantasy";}
+						/*输入多个字体，浏览器没有第一个，可以用第二个，第二个没有再用默认的*/
+	/*字体大小  字体大小  字体大小  字体大小  字体大小  字体大小  字体大小  字体大小   */
+		#font-size{font-size: 20px}
+		.em{font-size: 2em}
+		.percent{font-size: 150%}
+	/*字体颜色 字体颜色 字体颜色 字体颜色 字体颜色字体颜色字体颜色字体颜色字体颜色*/
+		h1{color: red}
+		p{color: rgb(0,0,255);}/*数字：0~255；百分比：0%~100%*/
+		p{color: rgb(100%,0%,0%);}
+		p{color: #008000}
+		           /*十六进制：#。。。。。。（六位数字）http://www.bootcss.com/p/websafecolors/*/
+	/* 字体粗细  字体粗细  字体粗细  字体粗细  字体粗细  字体粗细  字体粗细  字体粗细  */
+		.normal{font-weight: normal;}
+		.bold{font-weight: bold;}
+		.bolder{font-weight:bolder; }
+		.lighter{font-weight:lighter; }
+		.f100{font-weight: f100;}
+		.f200{font-weight: f200;}
+		.f300{font-weight: f300;}
+		.f400{font-weight: f400;}
+		.f500{font-weight: f500;}
+		.f600{font-weight: f600;}
+		.f700{font-weight: f700}
+		.f800{font-weight: f800}
+		.f900{font-weight: f900}
+	/* （字体倾斜）字体样式  字体样式  字体样式  字体样式  字体样式  字体样式  字体样式  字体样式  字体样式  */
+		.normal{font-style: normal;}
+		.italic{font-style: italic;}
+		.oblique{font-style: oblique;}
+		.fontVariant{font-variant: small-caps;}/*设置成小型的大写字母*/
+		/*.............................................................*/
+	</style>
+</head>
+<body>
+
+<!-- 字体font-famiy -->
+	<hr>
+	<div id="font-size">
+		<p>字体<span class="em">大小</span></p>
+		<p class="percent">字体大小font-size</p>
+		<!-- (相对父控件的大小)em表示原本大小，2em使原本打下的2倍 -->
+	</div>
+	<hr>
+	<hr>
+
+
+
+<!-- 字体颜色color -->
+<!-- 字体粗细font-weight -->
+	<hr>
+	<p class="normal">字体粗细font-weigh‘normal400</p>
+	<p class="bold">字体粗细font-weight“bold700</p>
+	<p class="bolder">字体粗细font-weight</p>
+	<p class="lighter">字体粗细font-weight</p>
+	<p class="f100">字体粗细font-weight</p>
+	<p class="f200">字体粗细font-weight</p>
+	<p class="f300">字体粗细font-weight</p>
+	<p class="f400">字体粗细font-weight</p>
+	<p class="f500">字体粗细font-weight</p>
+	<p class="f600">字体粗细font-weight</p>
+	<p class="f700">字体粗细font-weight</p>
+	<p class="f800">字体粗细font-weight</p>
+	<p class="f900">字体粗细font-weight</p>
+	<hr>
+
+	<p><i>字体</i><em>样式</em></p>
+	<p class="normal">正常字体</p>
+	<p class="italic">斜体一般用在引用部分</p>
+	<p class="oblique">倾斜 </p>
+	<p class="fontVariant">只对英文有用Cascading Style Sheets</p>
+	<hr>
+
+	<h1>CSS （层叠样式表） 编辑</h1>
+	<pre><p style="font-family:'Serif', '微软雅黑'";>
+	层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一
+	个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰
+	网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p> </pre>
+	<hr> 
+	
+</body>
+</html> 

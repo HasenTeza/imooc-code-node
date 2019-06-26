@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>线性渐变 - 从上到下（默认情况）</title>
+<style type="text/css">
+/*上下*/
+div {
+	width: 800px; height: 500px;
+	background: -webkit-linear-gradient(red, blue);
+	background:    -moz-linear-gradient(red, blue);
+	background:      -o-linear-gradient(red, blue);
+	background:         linear-gradient(red, blue);
+	/*-webkit-   -moz-   -o-各个浏览器的兼容*/
+}
+/*左右*/
+div {
+	width: 800px; height: 500px;
+	background: -webkit-linear-gradient(left, red , blue);
+	background:    -moz-linear-gradient(right, red, blue);
+	background:      -o-linear-gradient(right, red, blue);
+	background:         linear-gradient(to right, red , blue);
+	/*标准写法*/
+}
+/*对角线*/
+div {
+	width: 800px; height: 500px;
+	background: -webkit-linear-gradient(left top, red, yellow, blue);
+	background:    -moz-linear-gradient(right bottom, red, yellow, blue);
+	background:      -o-linear-gradient(right bottom, red, yellow, blue);
+	background:         linear-gradient(to right bottom, red, yellow, blue);
+}
+</style>
+</head>
+<body>
+	<!-- 
+	渐变(在两个或多个颜色之间显示很平稳的过度)要浏览器最新版本
+	1.线性渐变background：Linear-Gradients(方向，颜色1，颜色2 )
+	2.径向渐变 -->
+<div></div>
+</body>
+</html>

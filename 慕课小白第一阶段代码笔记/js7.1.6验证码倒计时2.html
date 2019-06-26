@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+      .main{
+      	padding:20px;
+      }
+      .btn{
+      	width:120px;
+      	height:25px;
+      	line-height:25px;
+      	text-align:center;
+      	border-radius:6px;
+      	background:#FF9A00;
+      	font-size:14px;
+      	cursor:pointer;
+      }
+	</style>
+	<script>
+       window.onload=function(){
+       	  // 获取按钮
+       	  var btn=document.getElementById("btn"),
+       	      time=10,
+       	      timer=null;
+       	  // 绑定事件
+       	  btn.onclick=function(){
+              // 判断按钮上是否有data-flag的属性，如果没有，则开启定时器
+              if(!this.getAttribute("data-flag")){
+                 // 执行间歇调用
+                 timer=setInterval(function(){
+                    time--;
+                    if(time<=0){
+                       clearInterval(timer);
+                       time=10;
+                       btn.innerHTML='发送验证码';
+                       btn.setAttribute("data-flag","");
+                    }else{
+                       btn.innerHTML=time+'秒后重试';
+                       // 给btn定义一个data-flag的属性，值为真
+                       btn.setAttribute("data-flag","flag");
+                    }
+                 },1000)
+              }
+       	  }
+       }
+	</script>
+</head>
+<body>
+	<div class="main">
+		<p class="btn" id="btn">发送验证码</p>
+	</div>
+</body>
+</html>

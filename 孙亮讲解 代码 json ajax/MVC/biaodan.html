@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <link rel="stylesheet" type="text/css" href="echarts.js"> -->
+</head>
+<body>
+<center>
+     <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+    <form action=""  id="saveUser">
+        姓名：<input type="text" name="name" required value=""/><br>
+        年龄：<input type="text" name="age" required value=""/><br>
+        喜欢吃：<select name="hobby" id="sele">
+        <option value="rou">肉</option>
+        　<option value="shuiguo" >水果</option>
+        　<option value="shucai">蔬菜</option>
+        　<option value="lingshi">零食</option>
+    </select>
+       <!-- 普通表单提交：<input type="submit" value="提交"><br>-->
+        <input type="button" onclick="sendFrom()" value="提交">
+    </form>
+</center>
+</body>
+<!-- <script src="/static/js/jquery.js"></script> -->
+<script src="echarts.js"></script>
+
+<script>
+
+     // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        function genData(len, offset) {
+    var lngRange = [-10.781327, 131.48];
+    var latRange = [18.252847, 52.33];
+
+    var arr = new Float32Array(len * 2);
+    var off = 0;
+
+    for (var i = 0; i < len; i++) {
+        var x = +Math.random() * 10;
+        var y = +Math.sin(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random() + (offset || 0) / 10;
+        arr[off++] = x;
+        arr[off++] = y;
+    }
+    return arr;
+}
+
+var data1 = genData(5e5);
+var data2 = genData(5e5, 10);
+
+option = {
+    title: {
+        text: echarts.format.addCommas(data1.length / 2 + data2.length / 2) + ' Points'
+    },
+    tooltip: {},
+    toolbox: {
+        left: 'center',
+        feature: {
+            dataZoom: {}
+        }
+    },
+    legend: {
+        orient: 'vertical',
+        right: 10
+    },
+    xAxis: [{
+    }],
+    yAxis: [{
+    }],
+    dataZoom: [{
+        type: 'inside'
+    }, {
+        type: 'slider'
+    }],
+    animation: false,
+    series : [{
+        name: 'A',
+        type: 'scatter',
+        data: data1,
+        dimensions: ['x', 'y'],
+        symbolSize: 3,
+        itemStyle: {
+            opacity: 0.4
+        },
+        large: true
+    }, {
+        name: 'B',
+        type: 'scatter',
+        data: data2,
+        dimensions: ['x', 'y'],
+        symbolSize: 3,
+        itemStyle: {
+            opacity: 0.4
+        },
+        large: true
+    }]
+};
+
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    $(function(){
+
+        $("#sele  option[value='{$hobby}'] ").attr("selected",true)
+
+    });
+
+    function sendFrom() {
+        $.ajax({
+            type : "post",
+            url : "/index/index/saveUser",
+            data : $("#saveUser").serialize(),
+            dataType : "json",
+            success : function(data) {
+                //todo 根据后端返回的结果，进行逻辑判断
+                if(data.result_code==200){
+                    alert('存储成功')
+                }else if(data.result_code==400){
+                    alert('存储失败')
+                }
+            },
+            error : function(data) {
+                alert("失败！");
+            }
+        });
+        //在此处调用存储对象方法ajax
+    }
+</script>
+</html>

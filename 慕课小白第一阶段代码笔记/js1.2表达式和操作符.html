@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!-- 操作符 -->
+<script type="text/javascript">
+	var num1=10,num2=20,num3=50;
+	console.log(num1+num2-num1);
+	console.log(num3*num1/num2);
+	console.log(num3%num1);
+	console.log(num3%num1);
+	num1=num1+num2;
+	num1+=num2 ;
+//1.数字操作符 ++n    n++     --n    n--// +=   -=   *=   /+ %==    
+//2.比较操作符 >;  <;  >=;  <=;  ==数值相等；===数值数据类型相等；返回值Boolean
+//3.逻辑操作符&&与（所有是true猜的true）  ||（有一个true，返回true）    
+console.log(80&&55);
+ 	//3.1第一个数操作值是true，返回第二个数，多个数返回最后一个数值 80是true返回55
+console.log(""&&null&&56);
+	//3.2第一个返回值是假false，返回第一个数“”空
+	//3.3 技巧补充：&&有NaN，返回NaN；有一个“”，返回“”。有一个false，返回false
+//////////////////////////////////////////////////////////////////////////////////////
+console.log("hello"||0);
+// 第一个对返回第一个，第一个错返回第二个，那个对返回哪个
+// ||技巧：都是null，返回null；都是NaN返回NaN；
+///////////////////////////////////////////////////////////////////////////////////////
+console.log(!false);  //true
+console.log(!88);		//false
+console.log(!0);		//true
+console.log(!"red");	//false
+console.log(!NaN);		//true
+console.log(!null);	//true
+</script>
+看到这里屡不清楚了看视频w
+</body>
+</html>

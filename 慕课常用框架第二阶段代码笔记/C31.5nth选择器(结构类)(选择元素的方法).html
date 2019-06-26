@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>First-Child更为复杂的有关子类父类的选择器</title>
+<style type="text/css">
+section > div:first-child {
+	color: #f00;
+}
+</style>
+</head>
+<body>
+nth选择器(结构类)(选择元素的方法)
+：first-child	父元素的首个子元素（第一个section和第二个section的2-1）
+:last-child     父元素的最后一个个子元素
+:nth-child(N)   父元素的第N个子元素 常用 括号里可以是表达式
+		nth-child(n）   全选
+		nth-child(2n）  奇数nth-child(odd）
+		nth-child(2n+1）偶数nth-child(even）
+		nth-child(n+4)  从第四行开始
+:nth-last-child(N) 其元素的第N个子元素的每一个元素 ，从最后一个元素计数
+:nth-of-type(N)		属于父元素的‘特定类型’的第N个子元素的每一个元素
+:nth-last-of-type() 属于父元素的‘特定类型’的第N个子元素的每一个元素，倒数
+<!--与:nth-child(N)不同的是:nth-of-type(N)只数指中标签；是标签都会算数 -->
+:first-of-type 属于父元素的‘特定类型’的第N个子元素的首个子元素每一个元素
+:last-of-type
+  属于父元素的‘特定类型’的第N个子元素的最后子元素元素每一个元素
+:only-child    属于父元素的唯一子元素的每个元素（父控件中只有一个子元素的才有用 ）
+:only-of-type  属于父元素‘特定类型’的唯一的子元素的每一个元素
+:empty  选择器匹配没有子元素的每一个元素（无标签，无内容）
+<div>0-1</div>
+<div>0-2</div>
+<div>0-3</div>
+<section>
+	<div>1-1</div>
+	<div>1-2</div>
+	<div>1-3</div>
+</section>
+<section>
+	<div>2-1</div>
+	<div>2-2</div>
+	<div>2-3</div>
+</section>
+</body>
+</html>

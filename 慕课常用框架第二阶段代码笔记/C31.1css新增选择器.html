@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!-- 基本选择器 -->
+<!-- ////////////////////////////////////////////////////// -->
+<style type="text/css">
+* { margin: 0; padding: 0; border: none; }
+body { background: #eee; }
+.list { list-style: square; }
+#list { width: 500px; margin: 0 auto; }
+.list li { margin-top: 10px; background: #abcdef; }
+</style>
+
+
+<!-- 新增选择器 -->
+<!-- 新一子元素选择器 -->
+<!--只能选择某元素的子元素 只对section下的div有用，在div里面的div都没用 -->
+<!-- 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 -->
+<style type="text/css">
+section > div {
+	color: #f00;
+}
+</style>
+
+<!-- 新二相邻兄弟元素选择器 -->
+<!-- 只对section下的div和挨着他的article有用，对另一个没用 -->
+<!-- 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 -->
+<style type="text/css">
+section > div + article {
+	color: #f00;
+}
+</style>
+
+
+
+<!-- 新三通用兄弟选择器 -->
+<!-- 只对section下的div同级的兄弟article有用，对div没用，对同级前面的article没有用，对后面的article有用-->
+<!-- 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 -->
+<style type="text/css">
+section > div ~ article {
+	color: #f00;
+}
+</style>
+
+
+
+<!-- 新四群组选择器 -->
+<!-- 将需要同样样式的标签写在一起用逗号分隔开 -->
+<!-- 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 -->
+<style type="text/css">
+section > article,
+section > aside,
+section > div {
+	color: #f00;
+	margin-top: 10px;
+	background: #abcdef;
+}
+</style>
+
+
+
+</head>
+<body>
+<ul id="list" class="list">
+	<li class="first">1</li>
+	<li class="second">2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+	<li>7</li>
+	<li>8</li>
+	<li>9</li>
+	<li>10</li>
+</ul>
+
+
+<section>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<div>article外面的文字</div>
+</section>
+
+
+
+<section>
+	<article>article</article>
+	<aside>aside</aside>
+	<div>div</div>
+</section>
+
+
+
+<section>
+	<div>article外面的文字</div>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+</section>
+
+
+
+<section>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<div>article外面的文字</div>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+	<article>
+		<div>article里面的文字</div>
+	</article>
+</section>
+</body>
+</html>

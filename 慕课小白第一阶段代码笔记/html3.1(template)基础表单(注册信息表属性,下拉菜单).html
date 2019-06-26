@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>基础表单</title>
+</head>
+<body>
+	<img src="picture\form.png">
+	<img src="picture\form1.png">
+	<img src="picture\form2.png">
+	<img src="picture\form3.png">
+	<h4>form属性，与后端相关，action后端信息处理器地址
+	 method信息传递网址形式get全部显示，post保密性好；
+	 target：_self在本页面中打开跳转页面(url页面)，
+	 _blank在心底空白页面打开 </h4>
+	<hr>
+	<hr>
+<form>
+	<pre>
+	(文本域) 姓名：<input type="text" name="username">
+
+	(密码域) 密码：<input type="password" name="paw">
+
+	(文件域)      <input type="file" name="">
+
+	(复选域)      <input type="checkbox" name="">
+
+	(单选域)      <input type="radio" name="">
+
+	(按钮)        <input type="Button" name="">
+
+	(提交按钮)    <input type="Submit" name="">
+
+	(重置按钮)    <input type="Reset" name="">
+
+	(隐藏域)      <input type="Hidden" name="">
+	不想让用户看到，还要实现它的功能
+
+	(图像域)      <input type="image" name="">
+	图像的提交按钮，用在按钮上的图片，图片上有按钮的功能
+	<!--统一资源定位符 不同的框输入内容的键盘不同-->
+<input type="email" name="email">	<!-- email输入框 -->
+<input type="url" name="url">		<!-- 域名输入框 -->
+<input type="tel" name="tel">		<!-- 电话输入框 -->
+<input type="number" name="number"> 
+	<!-- 数字输入框右侧可以上下调动数字 ，且只可以输入数字-->
+
+	</pre>
+	<hr>
+	<hr>
+
+	<h1 align="center">注册信息</h1>
+	<h4 align="center">用表格排版</h4>
+	<hr color="#336699">
+	<!--  -->
+	<form >
+		<table width="600px" bgcolor="#f2f2f2" align="center">
+			<tr>
+				<td align="right">姓名：</td>
+				<td align="left"><input type="text" name="username" size="25" 
+					maxlength="6" placeholder="请输入用户名"></td>
+			</tr>
+			<tr>
+				<td align="right">邮箱：</td>
+				<td align="left"><input type="text" name="email" value="@qq.com"></td>
+			</tr>
+			<tr>
+				<td align="right">密码：</td>
+				<td align="left"><input type="password" name="password" size="25" maxlength="12" placeholder="请输入密码"></td>
+			</tr>
+			<tr>
+				<td align="right">确认密码：</td>
+				<td align="left"><input type="password" name="password" size="25" maxlength="12" placeholder="请输入密码"></td>
+			</tr>
+			<tr>
+				<td align="right">上传照片：</td>
+				<td align="left"<input type="file" name="file" ></td>
+			</tr>
+			<tr>
+				<td align="right">性别：</td>
+				<td align="left">男<input type="radio" name="sex" value="man">
+					女<input type="radio" name="sex" value="women">
+					保密<input type="radio" name="sex" value="bm" checked>
+				</td>
+			</tr>
+<!-- 单选与复选中的value值在被选中后，传给服务器的信息；单选中name一样，复选中name不一样 -->
+			<tr>
+				<td align="right">爱好：</td>
+				<td align="left">骑马<input type="checkbox" name="c1" value="qima" 
+					checked>
+					游泳<input type="checkbox" name="c2" value="youyong"
+					 checked>
+					健身<input type="checkbox" name="c3" value="jianshen"
+					 checked>
+					跑步<input type="checkbox" name="c4" value="run"
+					 checked>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"  > 
+					<input type="Button" name="bt"  value="按钮居中">
+					<input type="Submit" name="ok" value="提交按钮文字更改">
+					<input type="Reset" name="no" value="重置按钮文字更改">
+					<input type="image" name="imbt"  src="chi.gif">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">简介</td>
+				<td align="left">
+					<textarea name="jianjie" placeholder="灰色的提示文字"
+					 rows="6" cols="20"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="Hidden" name="Hidden" value="这是一个用户住车标">
+				</td>
+				<td></td>
+			</tr>
+
+<!-- 下拉菜单  下拉菜单不能多项选择-->
+			<tr>
+				<td align="right">城市1：</td>
+				<td align="left">
+					<select name="city">
+						<option>---请选择---</option>
+						<option value="bj">北京</option>
+						<option value="tj">天津</option>
+						<option value="hb">河北</option>
+						<option value="sh">上海</option>
+						<option value="fj">福建</option>
+						<option value="xm">厦门</option>
+						<option value="tb">台北</option>
+						<option value="dq" selected>大庆</option>
+						<option value="heb">哈尔滨</option>
+						<option value="mh">漠河</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right">列表中有四个城市2：</td>
+				<td align="left">
+					<select name="city" size="4">
+						<option value="bj">北京</option>
+						<option value="tj">天津</option>
+						<option value="hb">河北</option>
+						<option value="sh">上海</option>
+						<option value="fj">福建</option>
+						<option value="xm">厦门</option>
+						<option value="tb">台北</option>
+						<option value="dq">大庆</option>
+						<option value="heb">哈尔滨</option>
+						<option value="mh">漠河</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">多项选择城市3：</td>
+				<td align="left">
+					<select name="city" size="6" multiple>
+						<option value="bj">北京</option>
+						<option value="tj">天津</option>
+						<option value="hb">河北</option>
+						<option value="sh">上海</option>
+						<option value="fj">福建</option>
+						<option value="xm">厦门</option>
+						<option value="tb">台北</option>
+						<option value="dq">大庆</option>
+						<option value="heb">哈尔滨</option>
+						<option value="mh">漠河</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">分组城市4：</td>
+				<td align="left">
+					<select name="city">
+						<option>---请选择---</option>
+						<optgroup label="南方">
+						<option value="bj">北京</option>
+						<option value="tj">天津</option>
+						<option value="hb">河北</option>
+						<option value="sh">上海</option>
+						<option value="fj">福建</option>
+						<option value="xm">厦门</option>
+						<option value="tb">台北</option>
+						</optgroup>
+						<optgroup label="北方">
+						<option value="dq">大庆</option>
+						<option value="heb">哈尔滨</option>
+						<option value="mh">漠河</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html> 

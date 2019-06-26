@@ -1,0 +1,33 @@
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <title>Document</title>
+</head>
+<body>
+       从浏览器窗口被打开开始，所有记录都会被保存在history中
+       浏览器浏览页前进后退
+       history.back()=history.go(-1);    回到上一页
+       history.forward()=history.go(1);   到下一页
+       <div class="box">
+              请输入搜索关键字：
+              <input type="text" placeholder="请输入搜索关键字" id="key">
+              <input type="button" value="搜索" id="search">
+       </div>
+       <a href="#" id="go">跳转</a>
+<!-- 1.后退链接按钮 -->
+       <a href="js7.3.1上一页.html">js7.3.1上一页</a>
+       <script>
+       // 给按钮绑定事件
+       document.getElementById("search").onclick=function(){
+                // 获取搜索关键字并对它进行编码
+                var key=encodeURIComponent(document.getElementById("key").value);
+                // 跳转到指定页面
+                location.href='js7.3.1上一页.html?search_key='+key;
+       }
+       var sea="搜索"
+       document.getElementById("go").href='js7.1.1BOM.window全局变量，窗口接口.html?key='+encodeURI(sea);
+       </script>
+</body>
+</html>

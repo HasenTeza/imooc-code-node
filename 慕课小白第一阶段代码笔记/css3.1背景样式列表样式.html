@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>背景样式和列表样式 </title>
+<!-- 背景颜色 -->
+	<style type="text/css">
+	div{
+		width: 150px;
+		height: 150px;
+		/*background-color: transparent;/* 透明*/
+	 	/*三种颜色的表达方式*/
+		/*1.background-color: red;*/
+		/*2.background-color: #ff0000;*/
+		background-color: rgb(255,0,0);
+		padding: 50px/*内边距*/
+		border:20px solid red;/*边框直线 边框颜色和文本颜色一致  dashed虚线 */	
+		/*margin: 20px外边框无作用*/
+	}
+	</style>
+
+<!-- 背景图片 -->
+	<style type="text/css">
+		.picture{
+			width: 300px;
+			height: 300px;
+			/*background-image: none; */
+			background-image: url(picture/7.png);/*图片背景*/
+			padding: 50px/*内边距*/
+			border:20px solid;/*边框*/	
+			/*margin: 20px外边框无作用*/
+/*图片平铺样式*/
+			background-repeat: no-repeat;    /*不平铺*/
+			background-repeat: repeat;       /*平铺*/
+			background-repeat: repeat-x;     /*横向平铺*/
+			background-repeat: repeat-y;     /*纵向平铺*/
+/*背景图片移动方式*/
+			background-attachment: fixed;    /*不随滚动条滚动*/
+			background-attachment: scroll;   /*随滚动条滚动*/
+/*图片定位，图片位置*/
+			background-position: top;         /*顶部水平居中*/
+			background-position: right;       /*右侧垂直居中*/
+			background-position: bottom;      /*底部水平居中*/
+			background-position: left;        /*左侧垂直居中*/
+			background-position: center;      /*水平垂直居中*/
+			background-position: 50px 50px;   /*距离上 左 */
+			background-position: 10% 10%;     /*X Y */
+/*背景整体表达*/
+			background:#444444 no-repeat scroll 50% 50% url(picture/7.);
+		}
+	</style>
+</head>
+<body>
+<!-- 背景颜色，背景图片 -->
+<div>bacground-color</div>
+<hr>
+<div class="picture">图片</div>
+</body>
+</html>

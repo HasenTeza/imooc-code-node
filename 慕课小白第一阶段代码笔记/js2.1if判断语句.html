@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- alert("您还没有成年");       弹出警告框
+		  prompt("请输入你的年龄：");  弹出输入框-->
+</head>
+<body>
+	<script type="text/javascript">
+	// var age=15;	
+	// if (age<18) {
+	// 	alert("您还没有成年");
+	// 	console.log(age);
+	// }else{
+	// 	alert("您已成年");
+	// }
+//////////////////////////////////////////////////
+	// var age=prompt("请输入你的年龄：");
+	// if (age<18) {
+	// 		alert("您还没有成年");
+	// 	console.log(age);
+	// }else{
+	// 	alert("您已成年,,请提供您的身份证号。");
+	// }
+/////////////////////////////////////////////////////
+	// var age=prompt("请输入你的年龄：");
+	// if (age<18) {
+	// 	alert("您还没有成年不能进入");
+	// }else if (age>=18&&age<=59) {
+	// 	alert("可以进入");
+	// }else{
+	// 	alert("年龄过大不可以进入");
+	// }
+/////////////////////////////////////////////////////////
+	// var password=prompt("请设置密码");
+	// if (password.length!=6) {
+	// 	alert("请输入6位的数字密码");
+	// }else{
+	// 	// 如果是非数字
+	// 	if (isNaN(password)==true) {
+	// 		alert("密码必须是数字");
+	// 	}else{
+	// 		alert("密码设置正确");
+	// 	}
+	// }
+/////////////////////////////////////////////////////////////
+	var str="abc123";
+	var num=parseInt(str);//将str强转成数字类型，不是数字开头，转换成NaN类型
+	if (num==NaN) {
+		alert(NaN);   	//NaN和任何内容都不相等，包括它本身
+	}else if (num==123) {
+		alert(123);
+	}else if (typeof num=="number") {
+		alert("num");
+	}else{
+		alert("str");
+	}
+	</script>
+
+
+</body>
+</html>

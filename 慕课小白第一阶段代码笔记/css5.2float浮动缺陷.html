@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>浮动缺陷</title>
+	<style type="text/css">
+/*。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+/*缺陷问题*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.per{
+			width: 500px;
+			height: auto;
+			border: 1px solid #000;
+			clear: left;
+			/*left左面不能有浮动 right右面无浮动 both不能有浮动*/
+			/*overfloat：hidden处理一出问题与zoom：1案子元素的高放大缩小父元素；相结合*/
+		}
+		.test{
+			width: 80px;
+			height: 30px;
+			background: red;
+			border: 1px solid #fff;
+			float: left;
+			/*Q1：加上浮动元素后，高度失效（浮动塌陷）*/
+		}
+		.bro{
+			width: 100px;
+			height: 100px;
+			background: blue;
+			clear: both;
+			/*Q2：高度被占*/
+		}
+/*。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+/*解决方法用clear属性*/
+	</style>
+</head>
+<body>
+	<div class="per">
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="test"></div>
+	<div class="bro"></div>
+</div>
+</body>
+</html>

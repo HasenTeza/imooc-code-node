@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>autocomplete</title>
+</head>
+<body>
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、	
+	<!-- autocomplete自动完成属性  再次登录有提醒，点击可自动补全-->
+	<form action="lesson2_1 autocomplete.html" autocomplete="on">
+		<!-- 默认是on -->
+		<input type="text" name="text">
+		<input type="email" name="email" autocomplete="off">
+		<input type="submit">
+	</form>
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+	<!-- autofocus="autofocus" 自动闪动输入光标适用于所有的input标签-->
+	<form action="lesson2_1 autocomplete.html" autocomplete="on">
+		<input type="text" name="text">
+		<input type="email" name="email" autocomplete="off" autofocus="autofocus"><!-- 自动闪动输入光标 -->
+		<input type="submit">
+	</form>
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+	<!-- multiple 上传文件，可以同时上传多个文件-->
+	<form action="lesson2_1 autocomplete.html" autocomplete="on">
+		<input type="file" name="file" multiple="multiple">
+		<input type="email" name="email" autocomplete="off" autofocus="autofocus" multiple="multiple">
+		<input type="email" name="email" autocomplete="off" autofocus="autofocus">
+		<input type="submit">
+	</form>
+
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+	<!--placeholder 输入框提示文字 -->
+	<form action="lesson2_1 autocomplete.html" autocomplete="on">
+		<input type="text" name="text" placeholder="您好，请在这里输入您的用户名！">
+		<input type="email" name="email" autocomplete="off">
+		<input type="submit">
+	</form>
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+	<!-- required表单验证；自动出现提示输入内容格式是否正确 -->
+	<form action="lesson2_1 autocomplete.html">
+	<input type="text" name="text" required="required">
+	<input type="email" name="email" required="required">
+	<input type="submit">
+	</form>
+
+
+</body>
+</html>

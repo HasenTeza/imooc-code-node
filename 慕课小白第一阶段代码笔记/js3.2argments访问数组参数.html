@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function inner(){
+	console.log(arguments.length);//传进来几个数
+	console.log(arguments[0,1]);	
+	//arguments[]是索引类似数组的元素排列来管理元素，索引内是从0开始的正整数，0是第一个数，1是第二个数
+	console.log(arguments[1]);
+	}
+	inner(10,5);
+////////////////////////////////////////////////////////////////////////////
+//求任意一组数的任意值
+	function getavg(){
+		var sun=0;len=arguments.length,i;
+		for(i=0;i<len;i++){
+			// console.log(arguments[i]);//打印出传入值
+			sum+=arguments[i];
+		}
+		console.log(sum);
+	}
+	getavg(4,13,43,65,76,234,634,)；
+</script>
+</body>
+</html>

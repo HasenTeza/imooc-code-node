@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>flex实现圣杯布局</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+        html,body,.wrap {
+            height: 100%;
+        }
+        header,footer {
+            height: 50px;
+            background: #757D8F;
+        }
+        .wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        .left {
+            background: #77BADD;
+        }
+        .right {
+            background: #C74453;
+        }
+        .left,.right {
+            width: 100px;
+        }
+        .middle {
+            display: flex;
+            flex:1;
+            justify-content: space-between;
+            background: #249D7F;
+        }
+        .content {
+            flex:1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>上野区</header>
+        <div class="middle">
+            <div class="left">
+                我方水晶
+            </div>
+            <div class="content">
+                敌军还有3秒到达战场
+            </div>
+            <div class="right">敌方水晶</div>
+        </div>
+        <footer>下野区</footer>
+    </div>
+</body>
+
+</html>

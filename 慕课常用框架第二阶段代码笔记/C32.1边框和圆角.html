@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>圆角border-radius(边框的圆角问题圆圈)</title>
+<style type="text/css">
+div {
+	width: 800px;
+	height: 300px;
+	border: 5px solid red;
+	margin: 0 auto;
+	/*border-radius: 50px*/
+	border-radius: 10%;/*缩短长的10%，宽的10%形成角*/ 
+	border-radius: 20px 30px 40px 50px;
+			/*四个值 左上 右上 右下 左下  从左上角顺时针*/
+			/*三个值 左上 右上左下 右下*/
+			/*两个值 左上右下 右上左下 对角线*/
+		/*复合*/
+		/*border-top-left-radius*/
+		/*border-top-right-radius*/
+		/*border-bottom-left-radius*/
+		/*border-bottom-right-radius*/
+
+}
+div {
+	position: relative;
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	-webkit-border-radius: 50%;/*webkit浏览器，加上前置不同的浏览器*/
+	   -moz-border-radius: 50%;/*moz火狐浏览器*/
+	    -ms-border-radius: 50%;/*msIE浏览器*/
+	     -o-border-radius: 50%;/*o浏览器*/
+	        border-radius: 50%;/*圆角*/
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 300px;
+}
+
+div:before,
+div:after {
+	position: absolute;
+	content: "";
+	display: block;
+	border: 1px solid black;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	    -ms-border-radius: 50%;
+	     -o-border-radius: 50%;
+	        border-radius: 50%;
+}
+div:before {
+	width: 50px;
+	height: 50px;
+	bottom: -25px;
+	right: 25px;
+}
+div:after {
+	width: 20px;
+	height: 20px;
+	bottom: -50px;
+	right: 0;
+}
+</style>
+</head>
+<body>
+<div>圆角border-radius</div>
+<div>大家好，欢迎来到慕课网！</div>
+</body>
+</html>

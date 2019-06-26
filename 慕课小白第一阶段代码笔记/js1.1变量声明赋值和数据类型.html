@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var name="adin", age=18, email=1359039561，address，seting=null,seting1="";
+	// 变量前面不用var，所有的变量都是全局变量
+	// var name;声明
+	// name=chulu;赋值
+///////////////////////////////////////////////////////////
+	// console.log(name)//在控制台中打印最好的检测方法
+	console.log(typeof name) ;//typeof是检测数据类型的，返回的值是数据类型
+
+
+// 1.声明一个变量像address，没有给他赋值就是undefined数据类型
+// 2. 声明一个变量准备在未来保存对象，最好初始化为null
+// 3.1Number整数和浮点数
+// 3.2NaN(not a Namber)非数值像123-(减)ABC，没有办法返回数值，数字无法计算，是number类型
+// 涉及到NAN的操作返回都是NAN，NaN与任何只都不相等包括他本身
+// 3.3isNaN(n) 检测n是否是NaN返回Boolean
+// 4.string类型 必须加引号
+// 5.boolean布尔    var isStudent=true;
+
+
+// 数值转换：Number（）不常用 parseInt（）提取整数 parseFloat（）提取小数；将非数值转换为数值
+	id=Number（id）;
+	var topval=parseInt("28px");
+	console.log(topval);//打印出来的是数字，转换的是以数字开头
+// 字符串转换：toString（）与String（）
+	var ids=7894535;
+	// console.log(typeof toString(ids));
+	var idstr=ids.toString();
+	console.log(typeof idstr);
+// boolean强转 数值只有等于零时是false,其他都是ture；字符null是false，其他都是true
+	var x=0,y=1;
+
+</script>
+</body>
+</html>

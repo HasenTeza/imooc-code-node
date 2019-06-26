@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UI元素状态伪类鼠标点击后可不可以输入</title>
+<style type="text/css">
+input {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #f00;
+}
+input:disabled {
+	background: #abcdef;
+	border: 1px solid #ff0;
+}
+</style>
+</head>
+<body>
+UI元素状态伪类：
+1.   ：enabled  可输入的
+2.   ：disabled 不可输入的(默认的)
+3.   ：checked  单选复选框中，选中的
+<input type="text" disabled="disabled">
+<input type="text" >
+<input type="text" >
+<input type="text" >
+</body>
+</html>
+

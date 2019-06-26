@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clip</title>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+div {
+    width: 800px;
+    height: 400px;
+    padding: 50px;
+    border: 50px solid transparent;
+    background: url('bg1.jpg') no-repeat 50px 100px;
+    background-origin: border-box;
+    background-origin: padding-box;
+    background-origin: content-box;
+}
+span.div_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 400px;
+    padding: 50px;
+    border: 50px solid rgba(255, 0, 0, .25);
+}
+span.div_padding {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 800px;
+    height: 400px;
+    border: 50px solid rgba(255, 255, 0, .25);
+}
+</style>
+</head>
+<body>
+<div></div>
+<!-- background-origin 
+1.pading-box    背景图片相对于内边距框来定位
+2.border-box    相对于边框来定位
+3.content-box   背景图相对于内容框定位
+-->
+<span class="div_border"></span>
+<span class="div_padding"></span>
+</body>
+</html>

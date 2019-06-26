@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>rotate3d旋转</title>
+<style type="text/css">
+div { width: 1500px; height: 250px; background: #abcdef; margin: auto; }
+/*transform: rotate3d(x,y,z,旋转角度【不能省略】)  1表示角度一样，2表示是角度的二倍*/
+div > img {transform: rotate3d(1, 1, 1, 45deg); } 
+
+
+/*以X轴为中心立体旋转*/
+/*div > img {transform: rotateX(45deg); } */
+
+
+/*以Y轴为中心立体旋转*/
+/*div > img {transform: rotateY(45deg); } */
+
+
+/*以中心Z轴旋转*/
+/*div > img {transform: rotateZ(45deg); } */
+
+ </style>
+</head>
+<body>
+<div><img src="images/sprite.jpg"></div>
+</body>
+</html>

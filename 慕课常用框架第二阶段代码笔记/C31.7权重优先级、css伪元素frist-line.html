@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>First-Line首行元素格式化</title>
+<style type="text/css">
+div {
+	width: 500px;
+	margin: 0 auto;
+}
+div::first-letter {
+	color: #f00;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div>
+权重优先级：行内样式+1000，一个id+100，一个属性选择器、class或伪选择器+10，一个元素名或伪元素+1，通配符选择器伪0，被继承的class属性权重为0；
+
+
+css伪元素用于某些选择器设置的特殊效果(元素::伪元素)
+1. first-line  对元素的第一行文本进行格式化(只能用于块级元素)
+2. first-letter 文本的首字母
+</div>
+</body>
+</html>
+
+ 

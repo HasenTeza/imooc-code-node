@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	定时器超时调用间歇调用，通过定时器制定在固定时间运行
+	<script>
+//定时调用
+       //setTimeout("函数名",4000);
+       //setTimeout("alert('hello')",4000);
+       var fnCall=function(){
+       	  alert("world");
+       }
+       var timeout1=setTimeout(function(){
+          alert("hello");
+       },2000)
+
+       clearTimeout(timeout1);
+//取消定时调用
+       //setTimeout(fnCall,5000);
+	</script>
+</body>
+</html>

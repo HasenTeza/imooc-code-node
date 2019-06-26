@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-justify-content</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .flex-container {
+            display:flex;
+            flex-wrap: wrap;
+            width: 150px;
+            height: 250px;
+            /*不换行没用*/
+/*在整个页面的相对控制*/
+            align-content: center;/* 中间 */
+            align-content: flex-start;/* 排列在开始位置 */
+            align-content: flex-end;/* 排列在结尾位置 */
+            align-content: stretch;/* 拉伸缝隙 */
+            align-content: space-between;/*上下各一行，中间平分 */
+            align-content: space-around;/*  */
+
+
+
+/*在纵向上相对位置控制(交叉轴)*/
+            align-items: flex-start;    /*开始 */
+            align-items: flex-end;      /*结尾*/
+            align-items: center;        /*中间 */
+            align-items: baseline;      /*底线对齐(英语下的那条线)*/
+            align-items: stretch;       /*拉长对齐*/
+
+/*垂直居中对齐*/
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-item {
+            margin:5px;
+        }
+/*如何控制主轴方向   flex-direction*/
+/*如何控制子元素换行  flex-wrap*/
+/*如何控住flex-item在主轴上对齐  justify-content*/
+/*如何控住flex-item在交叉轴上对齐 align-items*/
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        flex强大的布局性
+        <div class="flex-item red">小乔</div>
+        <div class="flex-item red">虞姬</div>
+        <div class="flex-item red">白起</div>
+        <div class="flex-item red">诸葛亮</div>
+        <div class="flex-item red">韩信</div>
+        <div class="flex-item red">赵云</div>
+        <div class="flex-item red">安琪拉</div>
+        <div class="flex-item red">娜可露露</div>
+    </div>
+</body>
+</html>

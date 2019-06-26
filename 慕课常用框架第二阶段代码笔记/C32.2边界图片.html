@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Border Image图片边框</title>
+<style type="text/css">
+div {
+	width: 853px;
+	height: 392px;
+	border-image-source: url("C3/border.jpg");
+	border-image-slice: 50%;
+	border-image-width: 50%;
+	border-image-outset: 2;
+	border-image-repeat: repeat;
+}
+</style>
+</head>
+<body>
+	<!-- border-image：IE和Operat不兼容 ，火狐谷歌可以用 
+		1.source  引入资源
+		2.slice   指定图像边界向内偏移number|%|fill
+		3.width   图像边宽
+		4.outset  图像边宽边框外部绘制area的量，边框线法外部占多少
+		5.repeat  是否重复 repeated重复 stretched拉伸 rounded铺满
+	-->
+<div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Size背景图片大小</title>
+<style type="text/css">
+div {
+	width: 800px;
+	height: 500px;
+	background: url("bg1.jpg") no-repeat;
+	background-size: contain;
+	background-size: cover;
+	background-size: 800px 500px;
+	/*一个值等比例缩放，两个值按值大小显示图片*/
+	background-size: 800px;
+	background-size: 50% 50%;
+	background-size: 50%;
+	background-size: 100% 100%;
+	background-size: 100%;
+}
+</style>
+</head>
+<body>
+	<!-- background-size:
+	1.length      数值
+	2.percentage  百分比|auto是原图片的百分比
+	3.cover       按比例缩放到不留白的区域
+	4.contain     宽度100%，按图片比例，显示
+	 -->
+<div></div>
+</body>
+</html>

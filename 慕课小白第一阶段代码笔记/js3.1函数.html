@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	//声明函数
+ 	function mydun(){
+ 		alert("这是一个函数");
+ 	}
+ 	// 函数的调用，函数必须调用才能是实现
+ 	mydun();
+ 	function add(num1,num2){
+ 		var sum=num1+num2;
+ 		return sum;
+ 		//alert(num1+'和'+num2+'的和是'+sum);//以弹出的形式显示出来
+ 	}
+	console.log(add(3,5));	//打印结果
+	alert(add(88,99));		//弹出显示
+	var s=add(-1,-8);console.log(s);	//与console.log(add(3,5));效果一样
+	document.write('-1+-9'+s);		//在浏览器显示
+////////////////////////////////////////////////////////////////////////////
+	function myFun(arg){
+		//如果arg是非数字，不做任何操作，否则返货爱人给的2倍
+		if (isNaN(arg)) return;
+		return arg*2;
+	}//return 返回值 提早退出函数，有返回值的时候用return
+	console.log(myFun(40));
+/////////////////////////////////////////////////////////////////////////////
+ </script>
+</body>
+</html>

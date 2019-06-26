@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>outline</title>
+<style type="text/css">
+div { width: 100px; margin: 100px; padding: 10px; border: 3px solid #333;
+	/*outline不占布局空间的边框*/
+	/*花在border外面，不占布局空间，不影响尺寸*/
+	/*宽度 风格 颜色<color>|invert颜色反色*/
+    outline: 5px solid #f00;
+    /*从边宽扩展10px*/
+    outline-offset: 10px;
+}
+</style>
+</head>
+<body>
+<div>注意边框线外面的红色轮廓</div>
+</body>
+</html>

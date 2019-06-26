@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>第一部分第二章第一节</title>
+</head>
+<body>
+	
+	<!-- tr是一行  td代表单元格 th是表头单元格（内容居中加粗）-->
+	<!--  加载一部分现实一部分，对表格进行划分 thead tbody tfoot-->
+	<!-- colspan 跨列属性  rowspan跨行属性-->
+	<!-- frame="void"  没有外边框 rules="rows" 行与列的内边框，【被弃用不建议使用】 -->
+	<img src="picture\table1.png">
+	<hr>
+	<hr>
+	<h3>表格</h3>
+	<table border="6" width="500px" bgcolor="#f2f2f2" cellspacing="0" cellpadding="5px" align="center" frame="void" rules="rows">
+		<caption>表格标题</caption>
+		<thead>	
+			<tr  bgcolor="#b8cce4e">
+				<th rowspan="2">城市</th>
+				<th colspan="2">2014年</th>
+				<th rowspan="2">2015年</th> 
+				<th rowspan="2">2016年</th>
+			</tr> 
+			<tr bgcolor="#b8cce4">
+				<th>上半年</th>
+				<th>下半年</th>
+			</tr>
+		</thead>
+
+
+		<tbody align="center" valign="middle">
+			<tr align="center" valign="middle" bgcolor="">
+				<td bgcolor="b8cce4">北京</td>
+				<td>4000</td>
+				<td>8000</td>
+				<td>9000</td>
+				<td>110000</td>
+			</tr>
+			<tr>
+				<td bgcolor="b8cce4">上海</td>
+				<td>6000</td>
+				<td>7000</td>
+				<td>11000</td>
+				<td>130000</td>
+			</tr>
+		</tbody>
+
+
+
+		
+		<tfoot>
+			<tr>
+				<td bgcolor="b8cce4">合计</td>
+				<td>10000</td>
+				<td>
+					<table>
+						<tr>
+							<th>123</th>
+							<th>456</th>
+						</tr>
+						<tr>
+							<td>789</td>
+							<td>457</td>
+						</tr>
+					</table>
+				</td>
+				<td>20000</td>
+				<td>240000</td>
+			</tr>
+		</tfoot>
+	</table>
+	<img src="picture\table2.png">
+</body>
+</html>  

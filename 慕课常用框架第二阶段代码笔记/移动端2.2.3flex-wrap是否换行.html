@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-justify-content</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .flex-container {
+            display:flex;
+            flex-direction: row;
+/*控制换不换行*/
+            flex-wrap: wrap;/*长度不够换行*/
+            flex-wrap: nowrap;/*长度不够不换行挤在一起*/
+            flex-wrap: wrap-reverse;/*长度不够倒叙换行挤在一起*/
+/*横向位置分配（主轴）*/
+            justify-content: space-between;
+            /*伸缩项目两边碰 中间空间平均分*/
+            justify-content: space-around;
+            /*伸缩项目平均分 剩余空间两边碰*/
+            justify-content: center;
+            /*横向居中*/
+            justify-content: flex-start;
+            /*从左向右排列*/
+            justify-content: flex-end;
+            /*从右向左排列*/
+
+
+
+
+
+
+
+            flex-flow: row-reverse wrap;
+            /*跟这两句的效果是一样的
+            flex-direction: row-reverse;
+            flex-wrap: wrap;*/
+            /*可以将各个属性放在一起*/
+        }
+        .flex-item:nth-child(1){
+            background: yellow;
+        }
+        .flex-item:nth-child(2){
+            background: green;
+        }
+        .flex-item:nth-child(3){
+            background: pink;
+        }
+        .flex-item:nth-child(4){
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+    </div>
+</body>
+</html>

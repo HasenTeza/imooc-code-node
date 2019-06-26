@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input type="button" value="刷新" id="reload">
+	<script>
+      /*  setTimeout(function(){
+            //location.href='js7.2.1lacation属性.html';
+                   //location改变浏览器位置,跳转到相对应页面，URL改变，可后退
+            // window.location='js7.2.1lacation属性.html';
+            location.replace("js7.2.1lacation属性.html");  
+                    //跳转到相对应页面，URL不改变，无后退    
+        },1000)*/
+    //点击按钮刷新，建议放在最后
+         document.getElementById("reload").onclick=function(){
+             // location.reload();//不传递任何参数，重新加载当前显示页面（刷新）
+         	 location.reload(true);//不传递任何参数，重新加载当前显示页面；从服务器重新加载
+         }
+	</script>
+</body>
+</html>

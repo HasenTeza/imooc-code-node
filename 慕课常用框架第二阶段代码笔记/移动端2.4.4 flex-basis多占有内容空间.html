@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex项目属性-flex-basis</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <style>
+        
+        .flex-container {
+            display: flex;
+        }
+        .flex-item {
+            flex-grow: 1;
+            /*伸缩项目的空间=
+            伸缩容器的空间-basis设置的空间-内容所占的空间*/
+            /*基准，计算前刨去的空间*/
+            /*刨去内容的宽度，实际上没有这些内容，但得站多些的空间*/
+            /*扩大内容算咱时间*/
+            flex-basis:auto;/*自动，和不动一样*/
+            flex-basis: 0;/*不多占有空间*/
+        }
+        .flex-item:nth-child(1) {
+        }
+        .flex-item:nth-child(2) {
+        }
+        .flex-item:nth-child(3) {
+        }
+        .flex-item:nth-child(4) {
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item red">A小乔</div>
+        <div class="flex-item blue">B虞姬</div>
+        <div class="flex-item green">C白起</div>
+        <div class="flex-item orange">D东皇太一一条小蛟龙</div>
+    </div>
+</body>
+
+</html>

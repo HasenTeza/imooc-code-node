@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>scale2D图片缩放</title>
+<style type="text/css">
+div { width: 1500px; height: 250px; background: #abcdef; margin: auto; }
+
+
+/*X轴缩放*/
+div > img {transform: scaleX(.5); } 
+
+/*Y轴缩放*/
+div > img {transform: scaleY(.5); }
+
+/*缩放原点不变，*/
+div > img {transform: scale(.5, .5); } 
+</style>
+</head>
+<body>
+<div><img src="images/sprite.jpg"></div>
+</body>
+</html>

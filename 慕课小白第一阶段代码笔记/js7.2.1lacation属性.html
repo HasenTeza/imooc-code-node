@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       .box1{height:400px;background:#ccc;}
+       .box2{height:600px;background:#666;}
+	</style>
+</head>
+<body>
+	<p>location,既是window对象的属性，也是document对象的属性</p>
+	<div class="box1" id="top"></div>
+	<div class="box2"></div>
+	<input type="button" id="btn" value="返回顶部">
+	<script>
+       //console.log(location.href);      //1.返回完整的URL（网址）
+       //console.log(location.hash);		//2.返回网址上#后面的内容
+       var btn=document.getElementById("btn");
+       btn.onclick=function(){
+          location.hash="#top";    
+          //与window.location.hred一样，找到指id，跳转到id指定位置
+       }
+       //3.返回服务器名称和端口号
+       console.log(location.host);
+       // 4.返回不带端口号的服务器名称
+       console.log(location.hostname);
+       //5.返回URL中的目录和文件名
+       console.log(location.pathname);
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>skew2d图片扭曲(变成菱形)</title>
+<style type="text/css">
+div { width: 1500px; height: 250px; background: #abcdef; margin: auto; }
+
+/*div > img {transform: skew(15deg, 15deg); } */
+/*正数顺时针菱形*/
+/*div > img {transform: skewX(15deg); }*/
+/*以Y轴中点扭曲成菱形旋转*/
+div > img {transform: skewY(15deg); } 
+</style>
+</head>
+<body>
+<div><img src="images/sprite.jpg"></div>
+</body>
+</html>

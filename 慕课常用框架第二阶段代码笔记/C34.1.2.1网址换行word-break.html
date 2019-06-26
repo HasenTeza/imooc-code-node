@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>word-wrap网址换行</title>
+<style type="text/css">
+h2 { width: 800px; margin: 10px auto; background: #abcdef; }
+/*很长的单词会溢出格*/
+h2:nth-child(1) { word-wrap: normal; }
+/*很长的单词会换行显示*/
+h2:nth-child(2) { word-wrap: break-word; }
+/*很长的网址会溢出表格*/
+h2:nth-child(3) { word-wrap: normal; }
+/*很长的网址一行满了会自动换行*/
+h2:nth-child(4) { word-wrap: break-word; }
+h2 > span { color: red; }
+</style>
+</head>
+<body>
+<h2><span>word-wrap: normal;</span><br>bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk</h1>
+<h2><span>word-wrap: break-word;</span><br>bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk</h1>
+<h2><span>word-wrap: normal;</span><br>这个字是由100个字母组成的。就出现在爱尔兰作家乔埃斯(James Joyce 1882-1942)作品《芬尼根守灵夜》(Finnegans Wake)的扉页，象征代表亚当和夏娃。（http://www.bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk.com）</h1>
+<h2><span>word-wrap: break-word;</span><br>这个字是由100个字母组成的。就出现在爱尔兰作家乔埃斯(James Joyce 1882-1942)作品《芬尼根守灵夜》(Finnegans Wake)的扉页，象征代表亚当和夏娃。（http://www.bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk.com）</h1>
+</body>
+</html>

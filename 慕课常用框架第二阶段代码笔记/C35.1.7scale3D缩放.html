@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>scale3d缩放</title>
+<style type="text/css">
+div { width: 1500px; height: 250px; background: #abcdef; margin: auto; }
+
+/*3D三个参数缺一不可*/
+div > img {
+	transform: scale3d(.5, .5, .5);
+}
+
+
+div > img {transform: scaleZ(.5); }
+/*以Y轴缩放是减少他的厚度，得与xy相结合才能看的出*/
+</style>
+</head>
+<body>
+<div><img src="images/sprite.jpg"></div>
+</body>
+</html>

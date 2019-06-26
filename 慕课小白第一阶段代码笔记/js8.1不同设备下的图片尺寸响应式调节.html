@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>尺寸调节</title>
+</head>
+<body>
+	<!-- 第一种js代码限制 -->
+	<script type="text/javascript">
+		function makeimageResponsivec(){
+			var width=$(window).width();
+			var img=$('.contenting');
+			if(width<=480){
+				img.attr('src','img/480.png');
+			}else if(width<=800){
+				img.attr('src','img/800.png');
+			}else(width<=1600){
+				img.attr('src','img/1600.png');
+			}
+		}
+		$(window).on('resize load','makeimageResponsivec');
+	</script>
+
+
+
+	<!-- 第二种 -->
+	<img src="480.png" sizes="(min-width=800px) 800px,100vw">
+
+
+
+	<!-- 第三种 -->
+	<!-- 当最大超过36em时，显示被裁减诚800w的图片；
+	orientation:landscape限制横屏 -->
+	<picture>
+		<source media="(max-width:36em)"
+				srcset="img/picture.png  800w"/>
+		<source media="orientation:landscape"
+				srcset="img/picture.png 1600w">
+		<img src="img/picture.png">
+	</picture>
+
+
+	<!-- 用picture处理响应式图片，需要下载polyfill刮墙：填平浏览器兼容问题，当出现浏览器不支持时，会有其他来替代；需要下载引入
+	<script src="js/vender/picturefill.min.js"> -->
+<!-- 网址：scottjehl.github.io/picturefill/ -->
+
+
+
+
+一般我们会用svg，png图片，直接冲PS中导出的图片文件过大，可以通过软件压缩后在进行使用
+iconizr.com   tingpng.com
+</body>
+</html>

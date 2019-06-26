@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html <head>
+	<meta charset="utf-8">
+	<title>css选择器</title>
+	<!-- 选择器 --> 
+	<style type="text/css">
+	p{color: grey}
+	.cssp1{color: green}
+	h3.cssp1{color: yellow}
+	#p1{color: pink}
+	</style>
+<!-- 伪类 -->
+<style type="text/css">
+/*link>visited>hover>active编写顺序*/
+	a:link{color: gold;}/*访问状态*/
+	a:visited{color: orange;}/*已访问状态*/
+	a:hover{color: purple;}/*鼠标悬停状态,用于鼠标经过的元素*/
+	a:active{color: green;}/*激活的链接，用于一个元素被激活*/
+	p:hover{color:red;}/*点击字体变大，点击字体变小*/
+	P:active{color: green;font-size: 20px}
+	a:focus{color: gold;}/*:focus 选择器用于选取获得焦点的元素。*/
+</head>
+<body>
+	<h5>css选择器就是告诉浏览器，我需要对谁进行样式设置</h5>
+	<h3>标签选择器</h3>
+	   <p>直接写标签名p.h1.h2(所有的相应标签都会变成我们所设置的样式)</p>
+	<h3 class="cssp1">类选择器</h3>
+	    <p class="cssp1 cssp2">用class给标签起一个名字，用名字编写样式 .名字{};
+	       有同样class名字的在前面加上标签名 H3.CSSP1{} ;class可以取多个名字的值,名字间用空格隔开</p>
+	<h3 id="p1 p2">ID选择器</h3>
+	     <p>与class相似不同的是前面加#（#p1）id是唯一的，同一个ID名只能用在一个标签上</p>
+	<h3>全局选择器</h3>
+	     <p>对所有的标签进行设置*{}</p>
+	<h3>群组选择器</h3>
+	     <p>集体统一设置p,h1,h2,h3,h4{}</p>
+	<h3>后代选择器</h3>
+	     <pre>
+				<P>
+					p em{color:red} /*p标签中的a标签中的em*/
+					#p1 em{}/*id为p1的标签中的em*/
+					p.red a em{}/*class为red的p标签中的a 标签的em*/
+				</P>
+	     </pre>
+	<a href="http://www.imooc.com">伪类例子</a>
+	<p>慕课网</p>
+	</body>
+	</html>.
+	

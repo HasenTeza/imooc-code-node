@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文本格式</title>
+	<style type="text/css">
+	.baseline{vertical-align: baseline;}
+	.sub{vertical-align: sub;}
+	.super{vertical-align: super}
+	.top{vertical-align: top}
+	.text-top{vertical-align: text-top;}
+	.middle{vertical-align: middle;}
+	.bottom{vertical-align: bottom;}
+	.text-bottom{vertical-align: text-bottom;}
+	/*对行内元素和表格有用图*/
+	/*.....................................................*/
+	.warp{
+		height: 400px;
+		widows: 100%;
+		border: 1px blue solid;
+		line-height: 400px
+		text-align:center;}/*单行居中*/
+		/*.......................................................*/
+		.warp1{
+			height: 400px;
+			widows: 100%;
+			border: 1px blue solid;
+			display: table-cell;
+		}
+		.content{
+			vertical-align: middle;/*垂直居中*/
+			text-align: center;/*水平居中*/
+			display: table-cell;/*所以将元素转换成单元格元素，因为只对行内元素。表格有用*/
+		}
+		/*。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+		.text3{
+			text-indent: 2em;/*首行缩进2*/
+			line-height: 1.3em;/*1.3em=字体30px*1.3*/
+			/*line-height: 25px;*/
+			font-size: 30px
+		}
+		/*..........................................................................*/
+
+
+
+
+	</style>
+</head>
+<body>
+	<h2>《猫》</h2>
+
+<!-- 段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中  段落左右居中 -->
+	<h3>文字左右移动</h3>
+	<hr><hr><hr><hr>
+	<div style="text-align: center"><img src="chi.gif"></div>
+<!-- 图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置，  图片位置， -->
+	<p style="text-align: left">
+		<!-- align="left" -->
+		　　猫的性格实在有些古怪。说它老实吧，它的确有时候很乖。它会找个暖和地方，成
+		　　天睡大觉，无忧无虑。什么事也不过问。可是，赶到它决定要出去玩玩，就会走出一天
+		　　一夜，任凭谁怎么呼唤，它也不肯回来。说它贪玩吧，的确是呀，要不怎么会一天一夜
+		　　不回家呢？可是，及至它听到点老鼠的响动啊，它又多么尽职，闭息凝视，一连就是几
+	　　个钟头，非把老鼠等出来不拉倒！</p><hr>
+	　　<p style="text-align: right">
+		<!--align="right"  -->
+		它要是高兴，能比谁都温柔可亲：用身子蹭你的腿，把脖儿伸出来要求给抓痒，或
+		　　是在你写稿子的时候，跳上桌来，在纸上踩印几朵小梅花。它还会丰富多腔地叫唤，长
+		　　短不同，粗细各异，变化多端，力避单调。在不叫的时候，它还会咕噜咕噜地给自己解
+		　　闷。这可都凭它的高兴。它若是不高兴啊，无论谁说多少好话，它一声也不出，连半个
+	　　小梅花也不肯印在稿纸上！它倔强得很！</p><hr>
+	　　<p style="text-align: center">
+		<!--  align="center"-->
+		是，猫的确是倔强。看吧，大马戏团里什么狮子、老虎、大象、狗熊、甚至于笨驴，
+		　　都能表演一些玩艺儿，可是谁见过耍猫呢？（昨天才听说：苏联的某马戏团里确有耍猫
+	　　的，我当然还没亲眼见过。）</p><hr>
+	　　<p style="text-align: justify;">
+		<!--align="justify"  -->
+		(两端对齐)这种小动物确是古怪。不管你多么善待它，它也不肯跟着你上街去逛逛。它什么都
+		　　怕，总想藏起来。可是它又那么勇猛，不要说见着小虫和老鼠，就是遇上蛇也敢斗一斗。
+		　　它的嘴往往被蜂儿或蝎子螫的肿起来。赶到猫儿们一讲起恋爱来，那就闹得一条街的人们
+		都不能安睡。它们的叫声是那么尖锐刺耳，使人觉得世界上若是没有猫啊，一定会更平静一些。
+	</p><hr><hr><hr><hr>
+
+
+
+
+<!-- 文字上下移动幅度  文字上下移动幅度  文字上下移动幅度  文字上下移动幅度  文字上下移动幅度  文字上下移动幅度  文字上下移动幅度 -->
+	<h3>文字上下移动</h3>
+	<img src="picture\vertical1.png">
+	<img src="picture\vertical2.png">
+	<p>CSS层叠样式表<span class="baseline">1111111111</span></p>
+	<p>CSS层叠样式表<span class="sub">1111111111111</span></p>
+	<p>CSS层叠样式表<span class="super">11111111111111</span></p>
+	<p>CSS层叠样式表<span class="top">1111111111111</span></p>
+	<p>CSS层叠样式表<span class="text-top">11111111111111111111</span></p>
+	<p>CSS层叠样式表<span class="middle">11111111111111</span></p>
+	<p>CSS层叠样式表<span class="bottom">111111111111111</span></p>
+	<p>CSS层叠样式表<span class="text-bottom">111111111111111</span></p>
+	<p>CSS层叠样式表<span style="vertical-align: 15px">1111111111</span></p>
+	<p>CSS层叠样式表<span style="vertical-align: -15px">1111111111111</span></p>
+	用在单元格
+	<table border="1px" cellspacing="0">
+		<tr>
+			<td class="top"><span>top</span></td>
+			<td class="middle"><span>middle</span></td>
+			<td class="bottom"><span>bottom</span></td>
+		</tr>
+	</table>
+	<hr><hr><hr><hr><hr>
+
+
+
+
+<!-- 单行居中  单行居中  单行居中  单行居中  单行居中  单行居中  单行居中  单行居中  单行居中  单行居中  单行居中 -->
+	<div class="warp"><h3>居中</h3>
+		　　<p>可是，及至女猫生下两三个棉花团似的小猫啊，你又不恨它了。它是那么尽责地看
+			　　护儿女，连上房兜兜风也不肯去了。
+		</p></div><hr><hr>
+<!-- 多行居中  多行居中  多行居中  多行居中  多行居中  多行居中  多行居中  多行居中  多行居中  多行居中  多行居中 -->
+		<div class="warp1">
+			<div class="content">
+				<img src="picture\xiaoxiong.gif">
+				　　<p>郎猫可不那么负责，它丝毫不关心儿女。它或睡大觉，或上屋去乱叫，有机会就和
+					　　邻居们打一架，身上的毛儿滚成了毡，满脸横七竖八都是伤痕，看起来实在不大体面。
+					　　好在它没有照镜子的习惯，依然昂首阔步，大喊大叫，它匆忙地吃两口东西，就又去挑
+					　　战开打。有时候，它两天两夜不回家，可是当你以为它可能已经远走高飞了，它却瘸着
+					　　腿大败而归，直入厨房要东西吃。
+				</p>
+			</div></div><hr><hr><hr><hr><hr>
+
+
+
+<!-- 行高设置   行高设置   行高设置   行高设置   行高设置   行高设置   行高设置   行高设置   行高设置   行高设置   -->
+			<div>
+				　　<p class="text1">
+					<h3>行高</h3>
+					过了满月的小猫们真是可爱，腿脚还不甚稳，可是已经学会淘气。妈妈的尾巴，一
+					　　根鸡毛，都是它们的好玩具，耍上没结没完。一玩起来，它们不知要摔多少跟头，但是
+					　　跌倒即马上起来，再跑再跌。它们的头撞在门上，桌腿上，和彼此的头上。撞疼了也不
+				　　哭。</p>
+				　　<p class="text2">
+					它们的胆子越来越大，逐渐开辟新的游戏场所。它们到院子里来了。院中的花草可
+					　　遭了殃。它们在花盆里摔跤，抱着花枝打秋千，所过之处，枝折花落。你不肯责打它们，
+					　　它们是那么生气勃勃，天真可爱呀。可是，你也爱花。这个矛盾就不易处理。
+				</p>
+				　  <p class="text3">
+					现在，还有新的问题呢：老鼠已差不多都被消灭了，猫还有什么用处呢？而且，猫
+					　　既吃不着老鼠，就会想办法去偷捉鸡雏或小鸭什么的开开斋。这难道不是问题么？
+				</p>
+			</div><hr><hr><hr><hr><hr>
+
+
+
+<!-- 字间距 下划线  字间距 下划线  字间距 下划线  字间距 下划线  字间距 下划线  字间距 下划线  字间距 下划线  字间距 下划线 -->
+			<p>字间距   英文汉字</p>
+			<p>css样式dtfliudfghjklertyguhjk</p>
+			<p style="word-spacing:10px ">
+			css样式Dtfli udfghj kl erty guh jk</p>
+			<!-- /*以空格来识别单词*/ -->
+			<p style="letter-spacing: 10px">
+			css样式dtfliudfghjklertyguhjk</p>
+			<!-- 每个字母都会又间距 可以使用px.em单位 -->
+			<p style="text-transform: capitalize;">css样式dtfliud</p> <!-- 首字母大写  -->
+			<p style="text-transform: uppercase;">css样式dtfliud</p> <!-- 字母大写  -->
+			<p style="text-transform: lowercase;">css样式dtflk</p> <!-- 字母小写 -->
+			<p style="text-transform: none;">css样式dtfliudfk</p> <!--没变化  -->
+			<p style="text-decoration: underline;">在我的朋友里颇有些位爱猫的</p><!--下划线  -->
+			<p style="text-decoration: overline;">在我的朋友里颇有些位爱猫的</p><!--上划线  -->
+			<p style="text-decoration: line-through;">在我的朋友里颇有些位爱猫的</p><!--删除线-->
+			<p style="text-decoration: blink;">在我的朋友里颇有些位爱猫的</p><!-- 闪烁效果 -->
+			<p style="text-decoration: none;">在我的朋友里颇有些位爱猫的</p><!-- 没有任何效果 -->
+			<a href="www.baidu.com" style="text-decoration: none;">
+			百度</a><!-- 去掉链接下划线 -->
+			<hr><hr><hr><hr>
+
+
+
+
+			　　<p>在我的朋友里颇有些位爱猫的。不知他们注意到这些问题没有？记得二十年前在重
+				　　庆住着的时候，那里的猫很珍贵，须花钱去买。在当时，那里的老鼠是那么猖狂，小猫
+				　　反倒须放在笼子里养着，以免被老鼠吃掉。据说，目前在重庆已很不容易见到老鼠。那
+				　　么，那里的猫呢？是不是已经不放在笼子里，还是根本不养猫了呢？这须打听一下，以
+			　　备参考。</p><hr>
+			　　<p>也记得三十年前，在一艘法国轮船上，我吃过一次猫肉。事前，我并不知道那是什
+				　　么肉，因为不识法文，看不懂菜单。猫肉并不难吃，虽不甚香美，可也没什么怪味道。
+			　　是不是该把猫都送往法国轮船上去呢？我很难作出决定。</p><hr>
+			　　<p>猫的地位的确降低了，而且发生了些小问题。可是，我并不为猫的命运多耽什么心
+				　　思。想想看吧，要不是灭鼠运动得到了很大的成功，消除了巨害，猫的威风怎会减少了
+				　　呢？两相比较，灭鼠比爱猫更重要的多，不是吗？我想，世界上总会有那么一天，一切
+				　　都机械化了，不是连驴马也会有点问题吗？可是，谁能因耽忧驴马没有事作而放弃了机
+			　　械化呢？</p><hr>
+		</body>
+		</html>

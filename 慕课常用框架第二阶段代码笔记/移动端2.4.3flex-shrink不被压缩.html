@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex项目属性-flex-shrink</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <style>
+        .flex-container {
+            display: flex;
+            width: 300px;
+            /*flex-shrink: 1;表示空间位置不够了，每个元素都平均压缩一下*/
+        }
+        .flex-item:nth-child(1) {
+            width: 100px;
+        }
+        .flex-item:nth-child(2) {
+            width: 200px;
+        }
+        .flex-item:nth-child(3) {
+            width: 150px;
+/*在所给空间不足的情况下会会把不足的空间平分，在每个元素上挤一点空间*/
+/*flex-shrink：0；表示不被压缩*/
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item red">A小乔</div>
+        <div class="flex-item blue">B虞姬</div>
+        <div class="flex-item green">C白起</div>
+    </div>
+</body>
+
+</html>

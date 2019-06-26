@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex容器属性-align-self</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <style>
+        /*为了授课方便 样式代码采用内部样式书写的方式*/
+        
+        .flex-container {
+            display: flex;
+            height: 250px;
+            align-items: center;
+        }
+        .flex-item:nth-child(1) {
+/* align-self某一个元素脱离集体单独设置布局*/
+            align-self: stretch;/*默认值*/
+        }
+        .flex-item:nth-child(2) {
+            align-self: flex-start;
+        }
+        .flex-item:nth-child(3) {
+            align-self: flex-end;
+        }
+        .flex-item:nth-child(4) {
+            font-size: 24px;
+            align-self: center;
+            /*align-self: baseline;字母基线*/
+        }
+        .flex-item:nth-child(5) {
+            font-size: 30px;
+            align-self: baseline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item red">A小乔</div>
+        <div class="flex-item blue">B虞姬</div>
+        <div class="flex-item green">C白起</div>
+        <div class="flex-item orange">D东皇太一</div>
+        <div class="flex-item orange">E诸葛亮</div>
+    </div>
+</body>
+
+</html>

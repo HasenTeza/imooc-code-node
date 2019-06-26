@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.btn{width:140px;height:30px;line-height: 30px;background:#00f;
+		color:#fff;font-size:14px;text-align:center;border-radius:5px;
+		cursor:pointer;margin-top:30px;}
+	</style>
+</head>
+<body>
+	<p>事件就是发生交互的瞬间，比如点击购买按钮跳转到购买界面呢，点击按钮，即触发时间</p>
+	<h4>由界面绑定事件</h4>	
+<!-- //1.第一种HTML绑定事件，（在HTML元素标签内添加事件，执行脚本） -->
+	<input type="button" value="弹出" onclick="alert('我是按钮')">
+		<!-- 鼠标滑过时调用mouseoverFn的函数 -->
+		<div class="btn" onmouseover="mouseoverFn(this,'#f00')" onmouseout="mouseoutFn(this,'#ff0')">开始</div>
+		<div class="btn" onmouseover="mouseoverFn(this,'#0f0')" onmouseout="mouseoutFn(this,'#333')">结束</div>
+<script type="text/javascript">
+		 function mouseoverFn(btn,bgColor){
+        	// 鼠标划过按钮时，按钮的背景变为红色
+            btn.style.background=bgColor;
+        }
+        function mouseoutFn(btn,bgColor){
+            btn.style.background=bgColor;
+        }
+        // 鼠标事件：
+        // onload:页面加载时触发		//不能理解看js6第三章
+        // onclick:鼠标点击时触发
+        // onmouseover:鼠标滑动时触发
+        // onmouseout:鼠标离开时触发
+        // onfoucs:获得焦点时触发
+        // onblur:失去焦点时触发
+        // onchange:域的内容改变时发生
+
+</script>
+</body>
+</html>

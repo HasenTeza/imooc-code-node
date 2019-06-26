@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>change-to-flex</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .flex-container {
+            /*第一步将display:flex;*/
+            display:flex;
+            /*变成行元素*/
+            display: inline-flex;
+        }
+        .flex-item:nth-child(1){
+            background: yellow;
+        }
+        .flex-item:nth-child(2){
+            background: green;
+        }
+        .flex-item:nth-child(3){
+            background: pink;
+        }
+        .flex-item:nth-child(4){
+            background: red;
+        }
+    </style>
+</head>
+<body>
+	能够更加高效方便控制元素对齐、排列，能够自动计算布局元素尺寸，无论这个元素的尺寸是固定的还是动态的
+    <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+        <div class="flex-item">D</div>
+    </div>
+</body>
+</html>

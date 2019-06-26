@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css继承层叠</title>
+<style type="text/css">
+	*{color: black}/*0*/
+	div{color: red;}/*1*/
+	#idgreen{color: green;}/*100*/
+	.classblue{color: blue;}/*10*/
+	.classyellow{color: yellow}/*10*/
+	#idgrenn b{color: orange}/*101*/
+	*{color: black !important}/*0*/
+  			/*important可以改变优先级，原本*{}权值是最小的，有“！important”就是最大的*/
+	/*
+		权值：
+			标签选择器：全职  1；
+			class选择器和“：”伪选择器：权值 10；
+			id选择器：权值为100；
+			通配符选择器*权值为 0；
+			行内样式：权值1000；
+	*/
+	/*
+		1.！important优先级最高
+		2.行内样式>内部样式>外部样式（link与style优先级取决于先后顺序）
+		3.样式表中优先级
+			id选择器>class选择器>标签选择器》通配符
+		4.权值相同，就近原则；权值不同，权值高优先高；
+	*/
+</style>
+</head>
+<body>
+ <p>单独使用</p>
+ <div>使用标签选这起样式</div>
+ <div id="idgreen">使用<b>ID样式</b></div>
+ <div class="classblue">使用class样式</div>
+ <!-- 优先结果：id>标签选择，class》标签选择 -->
+ <div id="idgreeen" class="classblue">css优先级，同时使用引用标签、ID。class定义样式</div>
+  <div class="classblus" id="idgreen">css优先级，同时使用引用标签、ID。class定义样式</div> <!-- 优先结果：id>class>标签选择器 -->
+  <p>同一个元素引用多个class样式</p>
+  <div class="classblue classyellow">css优先级</div>
+   <div class="classyellow classblue">css优先级</div>
+   <!-- 样式冲突后一个样式会覆盖前一个样式 （比如定义了多个颜色） -->
+</body>
+</html>

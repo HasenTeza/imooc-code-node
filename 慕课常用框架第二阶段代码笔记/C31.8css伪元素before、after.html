@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>before在原诉前或元素后插入新元素</title>
+<style type="text/css">
+div {
+	width: 300px;
+	height: 100px;
+}
+div::before {
+	content: "我在内容的前面";
+}
+div::selection{
+	background: red;
+	color: #ff0;
+}
+</style>
+</head>
+<body>
+<div>
+css伪元素用于某些选择器设置的特殊效果(元素::伪元素)
+1. first-line  对元素的第一行文本进行格式化(只能用于块级元素)
+2. first-letter 文本的首字母
+
+
+
+
+<!-- 很重要 -->
+3. before
+   在元素的内容前面插入新内容(第一个子元素，行级元素，内容通过content写入)
+4. after 在元素后面插入新内容，多用于清除浮动
+5. selection 在浏览器中选中文本后的背景色与前景色</div>
+</body>
+</html>

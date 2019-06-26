@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>新添加标签</title>
+</head>
+<body>
+<pre>
+	video  标记定义一个视频
+	audio  标记定义音频内容
+	source 标记定义媒体资源
+	canvas 标记定义图片（画布）
+	embed  标记外部的可交互的内容和插件，flash
+</pre>
+//////////////////////////////////////////////////////////////////
+<!-- audio -->
+<audio 
+	src="F:\CloudMusic\依然-蝶恋花.mp3" autoplay="autoplay" loop="1" controls="controls">
+	<!--音乐地址，自动播放，循环次数，
+		播放器控制器 (ati标签来调控控制器样式)-->
+	1.在这里添加文字，如果浏览器能识别audio标签，就不会显示这的字，如果不能识别，在这里提醒更换浏览器
+</audio>
+<audio>
+	2.音频文件格式有很多，在audio中用source标签，解决问题
+	<source src="F:\CloudMusic\依然-蝶恋花.mp3" type="audio/mpeg">
+</audio>
+////////////////////////////////////////////////////////////////////
+
+
+
+
+<!-- video -->
+<video src="F:\HTML\1.小白\picture\lingluan.gif" autoplay="autoplay" controls="controls"></video>
+<video controls="controls" width="1024" height="567">
+	<source src="F:\HTML\1.小白\picture\lingluan.gif" type="vodie/mp4">
+</video>
+////////////////////////////////////////////////////////////////////
+
+
+<!-- canvas -->
+////////////////////////////////////////////////////////////////////
+<!-- embed -->
+
+<embed src="F:\HTML\1.小白\picture\lingluan.gif" width="1024" height="456">声音和画面都能加载,可以更简单的插入视频</embed>
+</body>
+</html>

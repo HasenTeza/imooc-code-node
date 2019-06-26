@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//1.concat用于连接两个或多个数组
+var arr1=["a","b","c"],
+	arr2=[1,3,5,6],
+	arr3;
+	arr3=arr1.concat(arr2,[56,67,37,86,97,95,09]);
+	console.log(arr3);
+////////////////////////////////////////////////////////////////
+
+//2.slice从数组中返回选定的元素，start从哪开始选取end选到哪结束
+	// 数组名.slice（start，end）；
+var color=["green","red","blue","pink"];
+	// var newcolor=color.slice（3）；
+var newcolor=color.slice（1,2）；
+var newcolor1=color.slice（-1,2）；//负数时数组长度加上负数
+//3.完成以下代码，实现b数组对a数组的拷贝，方法越多越好
+var a=[1,"does",8],b;
+ 	//第一
+ 	b=new Arr3();
+ 	for (var i = 0; i < a.length; i++) {
+ 		b.push(a[i]);
+ 	}
+ 	//第二
+ 	b=[].concat(a);
+ 	//第三
+ 	b= a.slice（0);
+///////////////////////////////////////////////////////////////////////
+
+//1.splice()删除数组项   返回值是删掉的数
+//数组名arrayobject.splice(index,cont)[index索引坐标，count数组元素个数]
+var arr=["a","d","g","p","h"];
+var delarr=arr.splice(1,3);
+var delarr=arr.splice(1);	//从坐标1 以后全删除
+var delarr=arr.splice(1,0);	//0个，表示不删除
+//2.splice()插入数组项
+// 数组名arrayobject.splice(index,0，item1...itemx)[index插入起始位置，第二个参数表示删除说以是0；item是插入的元素]
+var arr1=["a","d","g","p","h"];
+var addarr=arr.splice(1,0,"ok",2,7,0);
+//3.splice()替换数组项[先删掉在插入]
+var arr2=["a","d","g","p","h"];
+var addarr=arr.splice(1,4,"ok",2,7,0);
+//////////////////////////////////////////////////////////////////////////////
+
+//1.indexof从数组开头向后查找,返回值number，查找元素的索引位置，没有返回-1
+//arrayobject.indexof(searchvalue,starindex);【查找项，查找起始位置】
+var arr3=["a","d","g","p","h"];
+var pos=nums.indexof(g， );//检测g所在数组什么位置
+//2.lastindexof从数组末尾查找
+/////////////////////////////////////////////////////////////////////////////////
+
+//封装一个方法，实现indexof功能(版本太低，没有indexof（）函数)
+var arr[3,1,6,3,7,9,3,115,36,636,75,90];
+function ArrayinfexOf(arr,value){
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i]===value) {
+			return i;
+		}
+	}
+	return -1;
+}
+var pos=ArrayinfexOf(nums,90);
+//////////////////////////////////////////////////////////////////////////////////
+</script>
+</body>
+</html>

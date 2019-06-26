@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>open</title>
+</head>
+<body>
+	<input type="button" value="退 出" id="quit">
+	<script>
+       window.onload = function(){
+       	  // 打开子窗口，显示newwindow.html
+// window.open("1.子窗口路径"，"2.声明新窗口名字，便于以后引用","3.对窗口的样式设置")
+       	window.open("js7.1.2newwindow.html","newwindow","width=400,height=200,left=0,top=0,toolbar=no,menubar=no,scrollbars=no,location=no,status=no");
+       	  var quit = document.getElementById("quit");
+// 点击关闭当前窗口, window.close();退出键；
+       	  quit.onclick = function(){
+       	  	  window.close();
+       	  }
+      }
+	</script>
+       <p>
+              width=400,窗口宽度
+              height=200,窗口高度
+              left=0,窗口X轴坐标
+              top=0,窗口Y轴坐标
+              toolbar=no,是否显示菜单栏
+              menubar=no,是否显示工具栏
+              scrollbars=no,是否显示滚动条
+              location=no,是否显示浏览器的地址字段
+              status=no是否显示状态栏</p>
+</body>
+</html>

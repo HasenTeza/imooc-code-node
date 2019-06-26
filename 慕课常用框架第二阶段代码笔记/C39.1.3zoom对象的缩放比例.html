@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>zoom对象的缩放比例</title>
+<style type="text/css">
+div { border: 1px solid #000; }
+.test  { zoom: normal; }
+.test2 { zoom: 5;      }
+.test3 { zoom: 300%;   }
+/*zoom对象的缩放比例，这个属性考虑放弃*/
+</style>
+</head>
+<body>
+<h1>zoom: normal;</h1>
+<div class="test">zoom:normal</div>
+<!-- 正常 -->
+<h1>zoom: 5;</h1>
+<div class="test2">zoom:5</div>
+<!-- 缩放数字 -->
+<h1>zoom: 300%;</h1>
+<div class="test3">zoom:300%</div>
+<!-- 缩放百分比 -->
+</body>
+</html>

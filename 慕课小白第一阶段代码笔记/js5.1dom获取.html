@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div class="box" id="box">
+		BOM元素获取
+	</div>
+	<ul id="list1">
+		<li>dom</li>
+		<li>js</li>
+		<li>css</li>
+		<li>xml</li>
+	</ul>
+	<ol>
+		<li>android</li>
+		<li>java</li>
+		<li>php</li>
+		<li>qiandaun</li>
+	</ol>
+<script type="text/javascript">
+//1.获取box元素
+	// var box1=document.getElementById("box");		//获取一id时使用
+	// var box1=document.getElementsByTagName("li");		//(xml标签)返回值是数组
+	var list=document.getElementById("list1").getElementsByTagName("li");
+	console.log(list);
+///////////////////////////////////////////////////////////////////////////////////////
+//2.设置元素样式  要设置的对象.style.样式名称=样式值
+var box1=document.getElementById("box");
+box.style.color='green';
+box.style.fontWeight="bold";
+	//添加li的背景颜色,先获取li，
+var lis=document.getElementById("list1").getElementsByTagName("li");
+	//获取的li返回值是数组，所以不能直接设置style，先遍历每个li
+	for (var i = 0, len=lis.length;i<len; i++) {
+		lis[i].style.color='#00f';
+		//使每一行的li颜色都不一样，可以用if语句
+		if (i==0) {
+			lis[i].style.backgroundColor='green';
+		}else if(i==1){
+			lis[i].style.backgroundColor='red';
+
+		}else if(i==2){
+			lis[i].style.backgroundColor='yellow';
+		}else(i==3){
+			lis[i].style.backgroundColor='pink';
+
+		}
+	}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+</script>
+</body>
+</html>

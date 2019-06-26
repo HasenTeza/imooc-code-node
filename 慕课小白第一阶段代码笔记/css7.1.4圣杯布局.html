@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+	<style type="text/css">
+		/*圣杯布局，中间宽度自适应，两边定宽；中间栏优先渲染；(浏览页面缩小，两边不变，大小变化)*/
+		.body{margin: 0;padding: 0;min-width: 700px}
+		.header,.footer{
+			width: 100%;height: 50px;background: #ccc;line-height: 50px;text-align: center;}
+		.container{padding: 0 220px 0 200px;}
+		.left,
+		.right,
+		.middle{
+			position: relative;
+			float: left;
+			min-height: 300px;
+		}
+		.left{width: 200px;background: #f00;margin-left: -100%;left: -200px;}
+		.right{width: 220px;background: #30a459;margin-left: -220px;right: -220px;}
+		.middle{width: 100%; background: #1a5acd;} </style>
+</head>
+<body>
+<div class="header">
+	<h4>header</h4>
+</div>
+<div class="container">
+	<div class="middle">
+		<h4>middle</h4>
+		<p>中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落中间内容段落</p>
+	</div>
+	<div class="left">
+		<h4>left</h4>
+		<p>左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分左边部分</p>
+	</div>
+	<div class="right">
+		<h4>right</h4>
+		<p>右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分右边部分</p>
+	</div>
+</div>
+<div class="footer">
+	<h4>footer</h4>
+</div>
+</body>
+</html>

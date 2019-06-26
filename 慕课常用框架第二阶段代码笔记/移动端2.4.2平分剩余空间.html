@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex项目属性-flex-grow</title>
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <style>
+        /*flex-grow怎样平分 剩余 空间，一样的数字代表占一样的空间*/
+        .flex-container {
+            display: flex;
+        }
+        .flex-item {
+            /*flex-grow: 1;*/
+        }
+        .flex-item:nth-child(1) {
+           flex-grow: 4;
+        }
+        .flex-item:nth-child(2) {
+            flex-grow: 2;
+        }
+        .flex-item:nth-child(3) {
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item red">A小乔</div>
+        <div class="flex-item blue">B虞姬</div>
+        <div class="flex-item green">C白起</div>
+    </div>
+</body>
+
+</html>

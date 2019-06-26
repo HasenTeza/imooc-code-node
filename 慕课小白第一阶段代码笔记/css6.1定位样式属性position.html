@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title></title> 
+ 	<style type="text/css">
+ 		.test{
+ 			width: 100px;
+ 			height: 100px;
+ 			background: red;
+ 			border: 1px solid #fff;
+ 			/*1.position: static; 标准流(正常定位) 
+ 					块元素有回车纵向排列 内联无回车横向排列*/
+ 			/*2.position: relative;
+ 					相对定位
+ 				 left: 50px; top:50px; 正常相对于左 上距离
+ 				 right: 50px; bottom: 50px; 以左上角为原点溢出当前窗口    相对通过四个方向进行定位 */
+ 				 			/* .div1{
+ 		 							width: 100px;
+ 		 							height: 100px;
+ 		 							background: blue;
+ 		 							position: relative;
+ 		 							left: 0;
+ 		 							top: 100px;
+ 									 }
+ 		 						.div2{
+ 		 							width: 100px;
+ 		 							height: 100px;
+ 		 							background: red;
+ 		 							position: relative;
+ 		 							left: 0;
+ 		 							top: -50px;
+ 		 						}*/
+ 			/*3.position: absolute; 
+ 				 left: 50px; bottom:50px; right:50px; top:50px;*/ 
+ 					/*绝对定位 脱离文档 定位后不随窗口移动而浮动*/
+ 			/*4.position: fixed;
+ 					/*脱离正常文档流，不受标准流约束 与3相似 但不受制于父元素*/
+ 			/*5.position: inherit;*/
+ 					/*继承父元素 父元素没有类型，子元素有也不会显示*/
+/*。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+ 			/*两元素重叠 后写的会覆盖先写的 z-index=1可改变覆盖层级，可在上
+ 			 父元素层级大于邻近的元素，子元素层级小也能覆盖在上面*/
+
+ 		}
+ 		 .div1{
+ 		 	width: 100px;
+ 		 	height: 100px;
+ 		 	background: blue;
+ 		 	position: relative;
+ 		 	left: 0;
+ 		 	top: 100px;
+ 		 }
+ 		 .div2{
+ 		 	width: 100px;
+ 		 	height: 100px;
+ 		 	background: red;
+ 		 	position: relative;
+ 		 	left: 0;
+ 		 	top: -50px;
+ 		 }
+ 	</style>
+ </head>
+ <body>
+ <body>
+ <body>
+
+ 	<div class="test"></div>		
+ 	<div class="test"></div>		
+ 	<div class="test"></div>		
+ 	<div class="test"1></div>
+ 	<div class="test"2></div>
+ 	<div class="div1"></div>
+ 	<div class="div2"></div>
+ 	<span>文字蚊子文字1</span>		
+ 	<span>文字蚊子文字2</span>		
+ 	<span  class="sp1">文字蚊子文字3</span>		
+ 	<span  class="sp2">文字蚊子文字4</span>		
+ 	<span  class="sp3">文字蚊子文字5</span>		
+ </body>
+ </html>

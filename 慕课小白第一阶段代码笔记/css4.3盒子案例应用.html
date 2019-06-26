@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.per{display: none;}    
+	/*per内容不出现*/
+	
+	a:hover .per{display:block; }
+	/*点击a链接是per内容出现以块元素的形式出现（另一行）inlet内联同一行*/
+</style>
+<style type="text/css">
+div,p,span{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑"；
+}
+.per{
+	width: 220px;background-color: #434343;border: 1px #ececec solid;
+	text-align: center;
+
+}
+</style>
+</head>
+<body>
+	<a href="#">指我。。。。<span class="per">和你捉迷藏</span></a>
+	<hr>
+	<hr>
+	<div class="per">
+		<div class="list2">
+			<p>前端课程排列</p>
+		</div>
+		<div class="list3">
+			<p>HTML课程</p>
+			<span>45613878人在学</span>
+			<p>css课程</p>
+			<span>45613878人在学</span>
+			<p>js课程</p>
+			<span>45613878人在学</span>
+			<p>Vue课程</p>
+			<span>45613878人在学</span>
+		</div>
+	</div>
+</body>
+</html>

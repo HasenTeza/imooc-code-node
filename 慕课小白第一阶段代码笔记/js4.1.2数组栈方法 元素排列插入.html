@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head> 
+<body>
+	<script type="text/javascript">
+//push把他的参数添加到arrayObject的尾部（在数组中添加数据，添加在后面）
+	var color=new Array("red","green");
+	color.push("blue","yellow");//数组数据添加
+//unshift把他的参数添加到arrayObject的首部（在数组中添加数据，添加在前面）
+	var nums=[2,5,7,9];
+	var size=nums.unshift(99,77);
+	console.log(size);
+//pop删除数组最后一个元素，返回值是删除的元素
+//shift删除第一个元素，返回值是删除的元素
+////////////////////////////////////////////////////////////////////////////
+//sort对数组中元素排序(降序)
+	var arr=[17,4,53,76,85,83,1,];
+	arr.sort(function(a,b){return b-a});//function匿名参数，返回值
+// 升序
+	// arr.sort(function(a,b){return a-b})
+
+	</script>
+</body>
+</html>
